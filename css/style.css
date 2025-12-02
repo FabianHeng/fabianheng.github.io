@@ -57,7 +57,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: rgba(var(--blue), 1);
+    color: rgba(var(--black), 1);
 }
 
 /* Styling scroll to top button */
@@ -846,6 +846,16 @@ a:hover {
     width: 100%;
     margin: 0 auto;
     z-index: 1;
+}
+
+.sep-link {
+    color: rgba(var(--black), 1);
+    transition: all 0.3s ease;
+}
+
+.sep-link:hover {
+    text-decoration: none;
+    color: rgba(var(--blue), 1);
 }
 
 /* Involvement & Achievements Section */

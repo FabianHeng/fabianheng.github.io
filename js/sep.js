@@ -54,7 +54,7 @@ const travelData = [
             },
             {
                 title: "Driving in US for the First Time",
-                text: "It was my first time driving in the US, and I must say, it was quite an experience! The roads are so wide and spacious compared to back home, and everyone drives on the right side, which took some getting used to. TIP: GET A CREDIT CARD IMMEDIATELY. Rental cars only accept credit cards, and the easiest way to get one is through Bank of America, it's called the <a href=\"https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/\" target=\"_blank\">Customized Cash Rewards credit card</a>.",
+                text: "It was my first time driving in the US, and I must say, it was quite an experience! The roads are so wide and spacious compared to back home, and everyone drives on the right side, which took some getting used to. TIP: GET A CREDIT CARD IMMEDIATELY. Rental cars only accept credit cards, and the easiest way to get one is through Bank of America, it's called the <a href=\"https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/\" target=\"_blank\" class=\"sep-link\">Customized Cash Rewards credit card</a>.",
                 img: "img/sep/houston/houston3.jpg"
             }
         ]
