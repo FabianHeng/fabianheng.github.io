@@ -175,20 +175,38 @@
         </style>
     </head>
     <body>
+        <!-- Scroll to top button -->
+        <button class="scroll-top-btn">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+
+        <!-- Hero Header Section -->
         <header class="sep-hero-header" id="sep-hero-container">
             <h1 id="sep-title" class="big-font">Loading Trip...</h1>
             <p id="sep-subtitle" class="big-font"></p>
             <p class="sep-meta small-font">Visited on: <span id="sep-date"></span></p>
         </header>
 
+        <!-- Main Content Section -->
         <div class="sep-container">
             <a href="life.html#sep" class="sep-nav small-font"><i class="fa fa-long-arrow-left"></i> &nbsp; Back to Home</a>
             
             <div id="sep-dynamic-content-area"></div>
         </div>
 
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script type="text/javascript" src="js/typewriter.js"></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
         <script src="js/sep.js"></script>
-
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const currentId = urlParams.get('id');
