@@ -14,7 +14,7 @@ const travelData = [
             },
             {
                 title: "Good Ol' Texas",
-                text: "To be a true Texan for a day, we headed out to the Lone Star Ranch for some gun SHOOTING! It was an exhilarating experience learning to handle different firearms, from pistols to the imfamous AK-47. After our shooting session, we went to Terry's Black for some authentic Texas BBQ. The brisket was melt-in-your-mouth tender, and the sides were just as delicious. A perfect way to embrace the Texan spirit!",
+                text: "To be a true Texan for a day, we headed out to the Lone Star Ranch for some gun SHOOTING! It was an exhilarating experience learning to handle different firearms, from pistols to the infamous AK-47. After our shooting session, we went to Terry's Black for some authentic Texas BBQ. The brisket was melt-in-your-mouth tender, and the sides were just as delicious. A perfect way to embrace the Texan spirit!",
                 img: "img/sep/austin/austin2.jpg"
             },
             {
