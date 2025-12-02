@@ -1,0 +1,36 @@
+.main-404 {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-404 img {
+    margin-top: 10em;
+    width: 50%;
+}
+
+.main-404 h1 {
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-top: 1.5em;
+}
+
+.main-404 h3 {
+    color: #656270;
+    font-weight: normal;
+}
+
+.main-404 button {
+    margin-top: 2em;
+}
+
+/* Start of Media */
+@media screen and (max-width: 768px) {
+    .main-404 img {
+        width: 60%;
+    }
+}

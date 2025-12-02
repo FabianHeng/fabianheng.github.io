@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Fabian Heng | Life</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS Pages Goes Here -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Favicon Goes Here -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="Favicon Icon" href="img/favicon/favicon.ico">
+    </head>
+
+    <body>
+        <!-- Navigation Section -->
+        <div class="nav">
+            <div class="nav-bar">
+                <div class="nav-left">
+                    <div class="logo-container">
+                        <img src="img/fab.png" loading="lazy" alt="" class="logo-img">
+                        <div class="logo-text">
+                            <div class="logo-top-text big-font">Fabian Heng</div>
+                            <div class="logo-bottom-text small-font">王禹璁</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-middle">
+                    <div class="nav-pill-glow life"></div>
+                    <div class="nav-pill">
+                        <a href="index.html" class="work nav-pill-toggle">
+                            <div class="nav-pill-text small-font">Work</div>
+                        </a>
+                        <a href="life.html" class="nav-pill-toggle">
+                            <div class="nav-pill-text small-font">Life</div>
+                        </a>
+                        <div class="nav-pill-outline life"></div>
+                    </div>
+                </div>
+
+                <div class="nav-right">
+                    <div class="socials-container">
+                        <a href="https://github.com/FabianHeng" target="_blank" class="socials-icon github"><li><i class="fa fa-github"></i></li></a>
+                        <a href="https://www.linkedin.com/in/fabianheng/" target="_blank" class="socials-icon linkedin"><li><i class="fa fa-linkedin"></i></li></a>
+                        <a href="https://www.instagram.com/f.fl.b/" target="_blank" class="socials-icon instagram"><li><i class="fa fa-instagram"></i></li></a>
+                        <a href="https://www.youtube.com/c/Entertainium" target="_blank" class="socials-icon youtube"><li><i class="fa fa-youtube"></i></li></a>
+                    </div>
+                    <label class="hamburger">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 32 32">
+                          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                          <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+                        <div class="socials-container-hamburger">
+                            <a href="https://github.com/FabianHeng/" target="_blank" class="socials-icon github"><li><i class="fa fa-github"></i></li></a>
+                            <a href="https://www.linkedin.com/in/fabianheng/" target="_blank" class="socials-icon linkedin"><li><i class="fa fa-linkedin"></i></li></a>
+                            <a href="https://www.instagram.com/f.fl.b/" target="_blank" class="socials-icon instagram"><li><i class="fa fa-instagram"></i></li></a>
+                            <a href="https://www.youtube.com/c/Entertainium/" target="_blank" class="socials-icon youtube"><li><i class="fa fa-youtube"></i></li></a>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to top button -->
+        <button class="scroll-top-btn">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+
+        <!-- About Me Section -->
+        <div class="about">
+            <div class="about-content">
+                <div class="about-img"><img src="img/life/about.jpeg" alt="A picture of me in the snow."></div>
+                <div class="about-img-mobile"><img src="img/life/about-mobile.jpeg" alt="A picture of me in the snow."></div>
+                <div class="about-text">
+                    <div class="about-top-text big-font">More about me.</div>
+                    <div class="about-bottom-text small-font">A 23-year old Singapore-based software developer. I first
+                        started my computing journey through cybersecurity and have since expanded my skills
+                        to include web development, game development, and machine learning. I am currently a
+                        penultimate year student at National University of Singapore, pursuing a degree in Computer
+                        Science.
+                    </div>
+                    <div class="button-blue"><a href="files/Fabian_CV.pdf" target="_blank">View my Curriculum Vitae.</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="education small-font ">
+            <div class="title">
+                <div class="title-dot"></div>
+                <div class="title-text big-font">Education</div>
+            </div>
+
+            <div class="education-wrapper">
+                <section class="education-card"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out"
+                    data-aos-once="true">
+                    <a href="https://www.comp.nus.edu.sg/programmes/ug/cs/" target="_blank">
+                        <img src="img/education/nuscs.png" alt="Logo of NUS School of Computing">
+                        <div class="splash-txt">
+                            <h3 class="big-font">Bachelor of Computing in Computer Science</h3>
+                            <h6 class="small-font">National University of Singapore</h6>
+                            <h6 class="small-font">August 2023 - Present</h6>
+                        </div>
+                    </a>
+                </section>
+                <section class="education-card"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out"
+                    data-aos-once="true">
+                    <a href="https://www.sp.edu.sg" target="_blank">
+                        <img src="img/education/spsoc.png" alt="Logo of SP School of Computing">
+                        <div class="splash-txt">
+                            <h3 class="big-font">Diploma in Infocomm Security Management</h3>
+                            <h6 class="small-font">Singapore Polytechnic</h6>
+                            <h6 class="small-font">April 2018 - March 2021</h6>
+                        </div>
+                    </a>
+                </section>
+                <section class="education-card"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out"
+                    data-aos-once="true">
+                    <a href="https://www.sst.edu.sg" target="_blank">
+                        <img src="img/education/sst.png" alt="Logo of SST">
+                        <div class="splash-txt">
+                            <h3 class="big-font">School of Science & Technology</h3>
+                            <h6 class="small-font">January 2014 - January 2017</h6>
+                        </div>
+                    </a>
+                </section>
+                <section class="education-card"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out"
+                    data-aos-once="true">
+                    <a href="https://shuqunpri.moe.edu.sg" target="_blank">
+                        <img src="img/education/shuqun.jpg" alt="Logo of Shuqun">
+                        <div class="splash-txt">
+                            <h3 class="big-font">Shuqun Primary School</h3>
+                            <h6 class="small-font">January 2008 - January 2013</h6>
+                        </div>
+                    </a>
+                </section>
+            </div>
+        </div>
+
+        <!-- SEP Section -->
+        <div class="sep small-font" id="sep">
+            <div class="title">
+                <div class="title-dot"></div>
+                <div class="title-text big-font">Travels</div>
+            </div>
+
+            <div data-aos="fade-up"
+                data-aos-offset="150"
+                data-aos-delay="50"
+                data-aos-duration="500"
+                data-aos-easing="ease-out"
+                data-aos-once="true" class="sep-card">
+                <div class="sep-title">
+                    <div class="sep-title-text">
+                        <div class="sep-role big-font">Student Exchange Program</div>
+                        <div class="sep-org small-font">University of Texas at Austin, United States of America</div>
+                        <div class="sep-date">Aug 25 - Dec 25</div>
+                    </div>
+                    <div class="sep-org-img">
+                        <img src="img/events/ut.png" alt="University of Texas at Austin Logo">
+                    </div>
+                </div>
+                <p class="sep-subtitle">
+                    Click on a pin to view my journey blog.
+                </p>
+                <div class="sep-map" id="sep-map"></div>
+            </div>
+        </div>
+
+        <!-- Involvement Section -->
+        <div class="involvement small-font">
+            <div class="title">
+                <div class="title-dot"></div>
+                <div class="title-text big-font">Involvement & Achievements</div>
+            </div>
+
+            <div class="involvement-content">
+                <div class="involvement-card"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out"
+                    data-aos-once="true">
+                    <div class="involvement-title">
+                        <div class="involvement-title-text">
+                            <div class="involvement-role big-font">President</div>
+                            <div class="involvement-org small-font">National University of Singapore, Korean Cultural Interest Group</div>
+                            <div class="involvement-date">May 24 - May 25</div>
+                        </div>
+                        <div class="involvement-org-img">
+                            <img src="img/events/kcig.jpg" alt="KCIG Logo">
+                        </div>
+                    </div>
+                    <div class="involvement-story">
+                        <section class="involvement-story-section">
+                            <img src="img/events/kcig-1.jpg" alt="Orientation Day">
+                            <div class="involvement-section-text">
+                                <div class="involvement-section-top-text big-font">Tough but fulfilling experience.</div>
+                                <div class="involvement-section-bottom-text small-font">As the president of 
+                                    KCIG, I was responsible for the overall management of the club. This included
+                                    planning and executing events, managing the club's finances, and ensuring the
+                                    well-being of the club members. It was a tough but fulfilling experience that
+                                    taught me a lot about leadership and teamwork.
+                                </div>
+                            </div>
+                        </section>
+                        <section class="involvement-story-section">
+                            <div class="involvement-section-text">
+                                <div class="involvement-section-top-text big-font">A learning journey.</div>
+                                <div class="involvement-section-bottom-text small-font">This role has given me the
+                                    invaluable opportunity to engage with people from diverse backgrounds, forging a deeper
+                                    appreciation for the Korean culture while expanding my leadership skills.
+                                    <br><br>
+                                    Through overseeing multiple projects simultaneously, I have refined my time management
+                                    skills, balancing administrative responsibilities with strategic planning to create
+                                    meaningful experiences for members. Delegating tasks effectively has been crucial in
+                                    empowering my team while maintaining efficiency, and handling club administration such
+                                    as budgeting and venue bookings has strengthened my organizational abilities. Additionally,
+                                    leading meetings, presenting proposals, and addressing large audiences have helped me
+                                    develop strong public speaking skills and the confidence to articulate ideas clearly.
+                                </div>
+                            </div>
+                            <img src="img/events/kcig-2.jpg" alt="Student Life Fair">
+                        </section>
+                    </div>
+                </div>
+
+                <div class="involvement-card"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out"
+                    data-aos-once="true">
+                    <div class="involvement-title">
+                        <div class="involvement-title-text">
+                            <div class="involvement-role big-font">Volunteer Management Committee</div>
+                            <div class="involvement-org small-font">National University of Singapore, Project Action Speaks Louder</div>
+                            <div class="involvement-date">Jan 23 - Jul 23</div>
+                        </div>
+                        <div class="involvement-org-img">
+                            <img src="img/events/asl.jpg" alt="ASL Logo">
+                        </div>
+                    </div>
+                    <div class="involvement-story">
+                        <section class="involvement-story-section">
+                            <img src="img/events/asl-1.jpg" alt="ASL Commemoration Day">
+                            <div class="involvement-section-text">
+                                <div class="involvement-section-top-text big-font">The act of giving.</div>
+                                <div class="involvement-section-bottom-text small-font">As the Volunteer Management
+                                    Committee member of Project ASL, I was responsible for recruiting and managing volunteers
+                                    for the club's events. This included planning and executing volunteer training
+                                    sessions, managing the volunteer database, and ensuring the well-being of the
+                                    volunteers. It was a fulfilling experience that taught me a lot about the act of
+                                    giving and the importance of community service.
+                                </div>
+                            </div>
+                        </section>
+                        <section class="involvement-story-section">
+                            <div class="involvement-section-text">
+                                <div class="involvement-section-top-text big-font">Heart to heart.</div>
+                                <div class="involvement-section-bottom-text small-font">This role has given me the
+                                    unique opportunity to engage with people from diverse backgrounds, which has touched
+                                    my heart deeply and expanded my empathy and communication skills.
+                                    <br><br>
+                                    Through Project ASL, I have had the privilege of contributing to a cause that promotes inclusivity
+                                    and understanding for the Deaf community. Coordinating volunteer efforts has helped to enhance my
+                                    service skills and foster a sense of camaraderie among team members. Additionally, planning and executing
+                                    events has strengthened my project management abilities, teaching me the importance of attention to detail
+                                    and adaptability. Overall, this experience has enriched my personal growth and reinforced my commitment
+                                    to making a positive impact in society.
+                                </div>
+                            </div>
+                            <img src="img/events/asl-2.jpg" alt="Volunteer Induction Programme">
+                        </section>
+                    </div>
+                </div>
+
+                <div class="involvement-card"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out"
+                    data-aos-once="true">
+                    <div class="involvement-title">
+                        <div class="involvement-title-text">
+                            <div class="involvement-role big-font">Programmes Committee</div>
+                            <div class="involvement-org small-font">Singapore Polytechnic, Sign Language Club</div>
+                            <div class="involvement-date">Apr 19 - Mar 21</div>
+                        </div>
+                        <div class="involvement-org-img">
+                            <img src="img/events/slc.png" alt="SLC Logo">
+                        </div>
+                    </div>
+                    <div class="involvement-story">
+                        <section class="involvement-story-section">
+                            <img src="img/events/slc-1.jpg" alt="SIGNature Concert">
+                            <div class="involvement-section-text">
+                                <div class="involvement-section-top-text big-font">The big stage.</div>
+                                <div class="involvement-section-bottom-text small-font">As a programmes committee
+                                    member of SLC, I was responsible for planning and executing the club's events.
+                                    This included managing an annual concert called "SIGNature" and various workshops
+                                    for the club members. It was a challenging but rewarding experience that taught me
+                                    valuable skills in event management and teamwork.
+                                </div>
+                            </div>
+                        </section>
+                        <section class="involvement-story-section">
+                            <div class="involvement-section-text">
+                                <div class="involvement-section-top-text big-font">Bridging the gaps.</div>
+                                <div class="involvement-section-bottom-text small-font">Through this role, I was introduced
+                                    to the Deaf community, allowing me to bridge communication gaps and foster inclusivity.
+                                    As an instructor, I have also had the opportunity to teach basic sign language, enhancing
+                                    communication skills and promoting inclusivity within the club.
+                                    <br><br>
+                                    Being a committee leader for the first time, I honed my leadership skills by coordinating
+                                    with team members to ensure the smooth execution of events. Organizing large-scale events
+                                    like "SIGNature" taught me the intricacies of event planning, from logistics to audience
+                                    engagement. Additionally, managing workshops enhanced my ability to communicate effectively
+                                    and adapt to different learning styles. Overall, these experiences have enriched my personal
+                                    growth and equipped me with valuable skills for future endeavors.
+                                </div>
+                            </div>
+                            <img src="img/events/slc-2.jpg" alt="Deaf Day Pamphlet">
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="small-font">
+            <div class="social">
+                <div class="icons">
+                    <h3 class="big-font">Social<span class="period">.</span></h3>
+                    <ul class="social-icons">
+                        <a href="https://github.com/FabianHeng/" target="_blank"><li><i class="fa fa-github"></i></li></a>
+                        <a href="https://www.linkedin.com/in/fabianheng/" target="_blank"><li><i class="fa fa-linkedin"></i></li></a>
+                        <a href="https://www.instagram.com/f.fl.b/" target="_blank"><li><i class="fa fa-instagram"></i></li></a>
+                        <a href="https://www.youtube.com/c/Entertainium/" target="_blank"><li><i class="fa fa-youtube"></i></li></a>
+                    </ul>
+                </div>
+                <div class="email">
+                    <i class="fa fa-envelope"></i><a href="mailto:fabian.heng@icloud.com">fabian.heng@icloud.com</a>
+                </div>
+            </div>
+            <img src="img/fab.png">
+            <div class="copyright">
+                <p>Made by Fabian Heng &copy; 2025</p>
+                <p>Miss my old webpage? You can still access it by clicking <a href="https://fabianheng.github.io/me/prev/prev.html">here</a>.</p>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/typewriter.js"></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="js/sep.js"></script>
+        <script>
+            if(document.getElementById('sep-map')) {
+                var isDesktop = window.matchMedia('(hover: hover)').matches;
+                var zoomLevel = isDesktop ? 4 : 3;
+                var centerCoords = [39.8283, -98.5795];
+
+                var map = L.map('sep-map', {
+                    scrollWheelZoom: false
+                }).setView(centerCoords, zoomLevel);
+                
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+                    maxZoom: 19
+                }).addTo(map);
+
+                if (typeof travelData !== 'undefined') {
+                    travelData.forEach(function(trip) {
+                        var marker = L.marker(trip.coords, { 
+                            riseOnHover: true
+                        }).addTo(map);
+
+                        var popupContent;
+
+                        if (isDesktop) {
+                            popupContent = `
+                                <div style="text-align:center; pointer-events: none;">
+                                    <span style="font-weight: bold; font-size: 14px; display: block; margin-bottom: 4px;">
+                                        ${trip.locationName}
+                                    </span>
+                                    <span style="font-size: 12px; color: #666;">
+                                        ${trip.date}
+                                    </span>
+                                    <br>
+                                    <span style="font-size: 11px; font-style:italic; color:rgba(var(--grey), 1);">Click pin to read</span>
+                                </div>
+                            `;
+                            marker.bindPopup(popupContent);
+
+                            marker.on('mouseover', function (e) {
+                                this.openPopup();
+                            });
+                            
+                            marker.on('mouseout', function (e) {
+                                this.closePopup();
+                            });
+
+                            marker.on('click', function() {
+                                window.location.href = `sep.html?id=${trip.id}`;
+                            });
+
+                        } else {
+                            popupContent = `
+                                <div style="text-align:center;">
+                                    <span style="font-weight: bold; font-size: 14px; display: block; margin-bottom: 4px;">
+                                        ${trip.locationName}
+                                    </span>
+                                    <span style="font-size: 12px; color: #666;">
+                                        ${trip.date}
+                                    </span>
+                                    <br>
+                                    <a href="sep.html?id=${trip.id}" style="display:inline-block; color:rgba(var(--dark-blue), 1); font-weight:bold; cursor:pointer; margin-top:4px;">
+                                        Explore &rarr;
+                                    </a>
+                                </div>
+                            `;
+                            marker.bindPopup(popupContent);
+                        }
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fabian Heng | Projects</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS Pages Goes Here -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Favicon Goes Here -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="Favicon Icon" href="img/favicon/favicon.ico">
+    </head>
+    <body>
+        <!-- Scroll to top button -->
+        <button class="scroll-top-btn">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+
+        <!-- Project Section -->
+        <div class="project">
+            <a href="index.html" id="p-nav" class="p-nav small-font"><i class="fa fa-long-arrow-left"></i> &nbsp; Back to Home</a>
+            <div class="p-splash">
+                <h1 id="p-title" class="big-font"></h1>
+                <p id="p-description" class="small-font"></p>
+                <video src="" playsinline autoplay loop muted poster=""></video>
+                <div class="tech-stack p-tech-stack"></div>
+                <div class="p-buttons">
+                    <div class="button-blue"><a><i class="fa fa-eye p-icon"></i></a></div>
+                    <div class="button-dark-blue"><a><i class="fa fa-github p-icon"></i></a></div>
+                </div>
+            </div>
+            <div id="p-content" class="p-content markdown-body small-font">
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="small-font">
+            <div class="social">
+                <div class="icons">
+                    <h3 class="big-font">Social<span class="period">.</span></h3>
+                    <ul class="social-icons">
+                        <a href="https://github.com/FabianHeng/" target="_blank"><li><i class="fa fa-github"></i></li></a>
+                        <a href="https://www.linkedin.com/in/fabianheng/" target="_blank"><li><i class="fa fa-linkedin"></i></li></a>
+                        <a href="https://www.instagram.com/f.fl.b/" target="_blank"><li><i class="fa fa-instagram"></i></li></a>
+                        <a href="https://www.youtube.com/c/Entertainium/" target="_blank"><li><i class="fa fa-youtube"></i></li></a>
+                    </ul>
+                </div>
+                <div class="email">
+                    <i class="fa fa-envelope"></i><a href="mailto:fabian.heng@icloud.com">fabian.heng@icloud.com</a>
+                </div>
+            </div>
+            <img src="img/fab.png">
+            <div class="copyright">
+                <p>Made by Fabian Heng &copy; 2025</p>
+                <p>Miss my old webpage? You can still access it by clicking <a href="https://fabianheng.github.io/me/prev/prev.html">here</a>.</p>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script type="text/javascript" src="js/typewriter.js"></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
+        <script src="js/projects.js"></script>
+        <script>
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            const projectName = getQueryParam("name");
+
+            if (projectName && projects[projectName]) {
+                const project = projects[projectName];
+
+                // Set back button
+                const backButton = document.querySelector('.p-nav');
+                backButton.href = `index.html#${projectName}`;
+                
+                // Set basic info
+                document.getElementById("p-title").innerText = project.title;
+                document.getElementById("p-description").innerText = project.description;
+                document.getElementById("p-content").innerHTML = marked.parse(project.content);
+                document.title = `Fabian Heng | ${project.title}`;
+                
+                // Set video/image
+                const videoElement = document.querySelector('.p-splash video');
+                if (project.video) {
+                    videoElement.src = `img/work/video/${project.video}`;
+                    videoElement.poster = `img/work/${project.image}`;
+                } else {
+                    videoElement.style.display = 'none';
+                    const imgElement = document.createElement('img');
+                    imgElement.src = `img/work/${project.image}`;
+                    imgElement.alt = project.title;
+                    imgElement.className = 'p-splash-image';
+                    videoElement.parentNode.insertBefore(imgElement, videoElement);
+                    videoElement.remove();
+                }
+                
+                // Set tech stack
+                const techStackContainer = document.querySelector('.p-tech-stack');
+                techStackContainer.innerHTML = '';
+                
+                project.tech.forEach(tech => {
+                    const span = document.createElement('span');
+                    span.className = tech.type;
+                    span.innerHTML = `<img src="img/svg/${tech.icon}">${tech.name}`;
+                    techStackContainer.appendChild(span);
+                });
+                
+                // Set buttons
+                const buttonsContainer = document.querySelector('.p-buttons');
+                if (project.demoUrl) {
+                    buttonsContainer.querySelector('.button-blue a').href = project.demoUrl;
+                    buttonsContainer.querySelector('.button-blue a').target = "_blank";
+                } else {
+                    buttonsContainer.querySelector('.button-blue').style.display = 'none';
+                }
+                
+                if (project.githubUrl) {
+                    buttonsContainer.querySelector('.button-dark-blue a').href = project.githubUrl;
+                    buttonsContainer.querySelector('.button-dark-blue a').target = "_blank";
+                } else {
+                    buttonsContainer.querySelector('.button-dark-blue').style.display = 'none';
+                }
+                
+            } else {
+                // If project not found, display a message
+                document.getElementById("p-title").innerText = "Project Not Found";
+                document.getElementById("p-description").innerText = "Sorry, the project you are looking for does not exist.";
+                document.getElementById("p-content").innerHTML = marked.parse("\`\`\`Please check the URL or go back to the homepage.\`\`\`");
+                document.getElementById("p-content").style.textAlign = "center";
+                document.querySelector('.p-buttons').style.display = 'none';
+                document.querySelector('.p-splash video').style.display = 'none';
+            }
+        </script>
+    </body>
+</html>

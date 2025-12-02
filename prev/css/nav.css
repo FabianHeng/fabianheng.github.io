@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Questrial&display=swap');
+
+/* Start of navigation bar styling */
+nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background-color: #fafcf8;
+    font-family: 'Lato', sans-serif;
+    padding-top: 1em;
+    padding-bottom: 0.2em;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+a {
+    color: #212529;
+    text-decoration: none;
+}
+
+nav.sticky {
+    padding: 1em 0 2.5em 0;
+    height: 0;
+    box-shadow: 0 4px 10px -2px #ccc;
+}
+
+.logo {
+    color: #212529;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+nav a{
+    position: absolute;
+}
+
+nav a:hover {
+    color: #00aedb;
+    transition: .3s;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%) scaleX(0);
+    -webkit-transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    width: 100%;
+    height: 5px;
+    background-color: #00aedb;
+    opacity: 0.5;
+    border-radius: 100px;
+    transition: transform 250ms;
+    -webkit-transition: transform 250ms;
+}
+
+nav a:hover:after {
+    transform: translateX(-50%) scaleX(1);
+    -webkit-transform: translateX(-50%) scaleX(1);
+}
+
+.onPage {
+    color: #00aedb;
+    font-weight: bolder;
+}
+
+/* Mobile NavBar */
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #212529;
+    margin: 5px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Start of Media */
+@media screen and (max-width: 1200px) {
+    .navbar {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 95%;
+        overflow-x: hidden!important;
+    }
+
+    .navbar {
+        position: absolute;
+        right: 0px;
+        height: 0px;
+        top: 9vh;
+        background-color: #fafcf8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        opacity: 0;
+        transition: transform 0.5s ease-in;
+        z-index: 998;
+    }
+
+    nav.sticky {
+        padding: 2em 0;
+        box-shadow: 0 4px 10px -2px #ccc;
+    }
+
+    nav a{
+        position: relative;
+    }
+
+    .navbar li {
+        opacity: 0;
+        font-size: 0px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .onPage {
+        font-weight: normal;
+    }
+}
+
+.nav-active {
+    opacity: 1;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+        font-size: 0px;
+    } to {
+        opacity: 1;
+        transform: translateX(0px);
+        font-size: 25px;
+    }
+}
+
+@keyframes navFadeIn {
+    from {
+        opacity: 0;
+        height: 0px;
+    } to {
+        opacity: 1;
+        height: 60vh;
+        box-shadow: 0 4px 10px -10px #ccc;
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

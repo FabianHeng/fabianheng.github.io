@@ -1,0 +1,113 @@
+.contact-main {
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contact-wrapper {
+    width: 60%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 50px 1px #ccc;
+    padding: 2.3em 2.2em;
+}
+
+.contact-wrapper h2 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+
+.contact-subtitle {
+    margin-bottom: 1em;
+    font-size: 1.3em;
+}
+
+.form {
+    padding: 1em;
+    overflow: hidden;
+    position: relative;
+}
+
+.input-div {
+    position: relative;
+    margin: 1.5em 0;
+}
+
+.input-div input, textarea {
+    width: 100%;
+    outline: none;
+    border-bottom: 0.5px solid #00aedb;
+    background: none;
+    padding: 0.6em 1em;
+    font-weight: 500;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    font-weight: 900;
+}
+
+textarea {
+    padding: 0.8em 1.2em;
+    min-height: 80px;
+    resize: none;
+    overflow-y: auto;
+}
+
+.input-div label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4em;
+    color: #00aedb;
+    font-size: 1.1em;
+    font-weight: 900;
+    pointer-events: none;
+    z-index: 50;
+    transition: 0.2s ease-in-out;
+}
+
+.textarea label {
+    top: 1em;
+    transform: translateY(0);
+}
+
+.input-div.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 15px;
+    font-size: 0.8em;
+}
+
+.submit-btn {
+    padding: 0.6em 1.3em;
+    background: none;
+    background-color: #ccc;
+    font-size: 0.95em;
+    color: #fafcf8;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50px;
+    border: 0.5px solid transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.submit-btn:hover {
+    background-color: transparent;
+    color: #212529;
+    border: 0.5px solid #212529;
+}
+
+/* Start of Media */
+@media screen and (max-width: 768px) {
+    .contact-wrapper {
+        width: 80%;
+    }
+}

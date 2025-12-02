@@ -1,0 +1,132 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5em;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social h3 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-width: 300px;
+}
+
+.social-icons a {
+    color: #212529;
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
+    line-height: 60px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px #ccc,
+                -4px -4px 10px #fafcf8;
+    cursor: pointer;
+    position: relative;
+    transition: 0.15s;
+}
+
+.social-icons a:nth-child(1):hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #fafcf8;
+    background-color: #1A1E22;
+}
+
+.social-icons a:nth-child(2):hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #fafcf8;
+    background-color: #0C64C5;
+}
+
+.social-icons a:nth-child(3):hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #fafcf8;
+    background-color: #d62976;
+}
+
+.social-icons a:nth-child(4):hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #fafcf8;
+    background-color: #F70000;
+}
+
+footer img {
+    width: 6%;
+    margin: 0 auto;
+    margin-top: 8em;
+    border-radius: 15%;
+}
+
+.email {
+    font-size: 1.1em;
+}
+
+.email a {
+    text-decoration: underline;
+    color: #656270;
+    transition: 0.1s;
+}
+
+.email a:hover {
+    color: #00aedb;
+}
+
+.email i {
+    margin-right: 1em;
+    color: #212529;
+}
+
+.copyright {
+    margin-top: 1em;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+}
+
+/* Start of Media */
+@media screen and (max-width: 768px) {
+    .email {
+        margin-top: 2em;
+    }
+
+    footer img {
+        width: 10%;
+    }
+
+    .social-icons a:nth-child(1) {
+        color: #fafcf8;
+        background-color: #1A1E22;
+    }
+    
+    .social-icons a:nth-child(2) {
+        color: #fafcf8;
+        background-color: #0C64C5;
+    }
+    
+    .social-icons a:nth-child(3) {
+        color: #fafcf8;
+        background-color: #d62976;
+    }
+
+    .social-icons a:nth-child(4) {
+        color: #fafcf8;
+        background-color: #F70000;
+    }
+}

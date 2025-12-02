@@ -1,0 +1,202 @@
+#about-body {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.about-img {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-img::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(250, 252, 248, 0.05);
+    z-index: 25;
+}
+
+.about-splash {
+    position: absolute;
+    z-index: 30;
+    line-height: 4rem;
+    top: calc(35% - 2rem);
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #fafcf8;
+    z-index: 18;
+}
+
+.img-ground {
+    position: absolute;
+    width: 900px;
+    bottom: -150px;
+    left: 0;
+    z-index: 19;
+}
+
+.img-house {
+    position: absolute;
+    width: 1650px;
+    bottom: -100px;
+    right: 0;
+    z-index: 20;
+}
+
+.img-sky {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+section {
+    width: 100%;
+    position: relative;
+}
+
+.about-wrapper {
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.about-wrapper > * {
+    margin: 2em;
+}
+
+.about-content-img img {
+    width: 100%;
+}
+
+.about-content {
+    width: 100%;
+}
+
+.about-content h3 {
+    font-weight: 600;
+    font-size: 2em;
+    position: relative;
+}
+
+.about-content p {
+    line-height: 1.5em;
+}
+
+.about-border {
+    position: relative;
+    width: 20%;
+    height: 3px;
+    background-color: #00aedb;
+    margin-bottom: 1.5rem;
+}
+
+.shadow {
+    position: absolute;
+    bottom: 100%;
+    height: 300px;
+    width: 100%;
+    left: 0;
+    z-index: 21;
+    background: linear-gradient(to top, #fafcf8, transparent);
+}
+
+.about-skills h3 {
+    text-align: center;
+    font-size: 3em;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.about-skills-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+.about-skills-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    margin-bottom: 0.5em;
+    width: 15%;
+}
+
+.about-skills-card img {
+    width: 50px;
+}
+
+.about-skills-card h6 {
+    margin-top: 0.5em;
+}
+
+/* Start of Media */
+@media screen and (max-width: 1200px) {
+    .about-img {
+        height: 1000px;
+    }
+    
+    .about-splash {
+        font-size: 2.5em;
+    }
+
+    .img-ground {
+        width: 800px;
+        bottom: 0;
+    }
+    
+    .img-house {
+        width: 1350px;
+        bottom: 0;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-img {
+        height: 100vh;
+    }
+
+    .about-splash {
+        font-size: 1.5em;
+        top: calc(40% - 3.5rem);
+    }
+
+    .img-ground {
+        width: 500px;
+    }
+    
+    .img-house {
+        width: 650px;
+    }
+    
+    .img-sky {
+        width: 1500px;
+    }
+
+    .about-wrapper {
+        width: fit-content;
+        height: fit-content;
+    }
+}
