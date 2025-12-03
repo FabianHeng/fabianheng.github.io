@@ -67,6 +67,21 @@ const travelData = [
         date: "3 Oct 2025",
         heroImage: "img/sep/yellowstone/yellowstone.jpg",
         sections: [
+            {
+                title: "Next stop: Bozeman, Montana",
+                text: "Travelling to Bozeman is our first plane trip with the big group of friends! We took a short transit flight from Austin to Bozeman (with a nasty 10min window at Chicago due to delays), and the views from the plane were absolutely breathtaking. As we descended into Bozeman, we were greeted by stunning mountain landscape mountains and vast open spaces. It was a refreshing change from the cityscape of Austin, and I couldn't wait to explore the natural beauty that Montana has to offer. We even went to visit Applebee's for dinner because why not.",
+                img: "img/sep/yellowstone/yellowstone1.jpg"
+            },
+            {
+                title: "Mammoth Hot Springs",
+                text: "Due to the 2025 government shutdown, some of the National Parks are free to enter, which is great news for all of us. However, the trails are not maintained and there are no staff or guest services present, which we have to be mindful of. Our first stop in Yellowstone was the Mammoth Hot Springs, and it did not disappoint! The terraces were a stunning display of nature's beauty, with vibrant colors and intricate formations created by the geothermal activity. Walking along the boardwalks, we could smell the sulphuric gases emitted by the springs which reeked of rotten eggs. It was a surreal experience to witness such a unique natural wonder up close.",
+                img: "img/sep/yellowstone/yellowstone2.jpg"
+            },
+            {
+                title: "Another Grand Canyon?",
+                text: "We drove to the Grand Canyon of Yellowstone next, and I must say, it was just as impressive as its Arizona counterpart! The sheer size and scale of the canyon were insane, with vibrant colors and dramatic rock formations that seemed to stretch on forever. We hiked along the rim, taking in the breathtaking views and snapping plenty of photos. The highlight of the visit was definitely hiking up and down 200ft and seeing the powerful waterfalls cascading down into the canyon below. It was a humbling experience to witness the raw power of nature in such a magnificent setting.",
+                img: "img/sep/yellowstone/yellowstone3.jpg"
+            },
         ]
     },
     {

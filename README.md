@@ -31,6 +31,6 @@ This site is hosted using GitHub Pages:
 
 ## 📬 Contact
 
-- Email: fh6724@my.utexas.edu  
+- Email: fabian.heng@icloud.com
 - GitHub: [https://github.com/fabianheng](https://github.com/fabianheng)
 - LinkedIn: [https://www.linkedin.com/in/fabianheng](https://www.linkedin.com/in/fabianheng)
