@@ -82,6 +82,11 @@ const travelData = [
                 text: "We drove to the Grand Canyon of Yellowstone next, and I must say, it was just as impressive as its Arizona counterpart! The sheer size and scale of the canyon were insane, with vibrant colors and dramatic rock formations that seemed to stretch on forever. We hiked along the rim, taking in the breathtaking views and snapping plenty of photos. The highlight of the visit was definitely hiking up and down 200ft and seeing the powerful waterfalls cascading down into the canyon below. It was a humbling experience to witness the raw power of nature in such a magnificent setting.",
                 img: "img/sep/yellowstone/yellowstone3.jpg"
             },
+            {
+                title: "Open Range",
+                text: "Yellowstone is huge. We arrived at a geyser basin area and it was wide open with no barriers. There were many geysers and hot springs scattered all across the open fields and it really felt like walking through a warzone. I also heard this place is infamous for \"hotpotting\", where people would wonder off paths and sneak into the hot springs.",
+                img: "img/sep/yellowstone/yellowstone4.jpg"
+            },
         ]
     },
     {
@@ -168,7 +173,7 @@ const travelData = [
         id: "chicago",
         locationName: "Chicago, IL",
         coords: [41.8781, -87.6298],
-        title: "Chicago Experience",
+        title: "The Bean and Beyond",
         date: "5 Dec 2025",
         heroImage: "img/sep/chicago/chicago.jpg",
         sections: [
