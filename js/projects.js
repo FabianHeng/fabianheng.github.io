@@ -1,7 +1,69 @@
 const projects = {
+        "sfc": {
+        "title": "Singapore Financial Calculator",
+        "description": "A comprehensive financial calculator web application that provides various financial tools and resources for users to manage their finances effectively.",
+        "tech": [
+            { "type": "lang", "name": "react", "icon": "react.svg" },
+            { "type": "lang", "name": "html", "icon": "html.svg" },
+            { "type": "lang", "name": "css", "icon": "css.svg" },
+            { "type": "lang", "name": "js", "icon": "js.svg" },
+            { "type": "prog", "name": "supabase", "icon": "supabase.svg" },
+            { "type": "prog", "name": "vite", "icon": "vite.svg" },
+            { "type": "prog", "name": "nodejs", "icon": "nodejs.svg" },
+            { "type": "prog", "name": "vercel", "icon": "vercel.svg" }
+        ],
+        "content": `
+### 🧾 Overview
+
+**Singapore Financial Calculator (SFC)** is a comprehensive, all-in-one financial planning web application built specifically for the Singaporean context. Navigating local policies like CPF contribution rates, BTO housing rules, and IRAS income tax brackets can be incredibly complex. This app aggregates these variables into a single, unified engine to project your lifelong net worth, track assets, and simulate major life milestones up to retirement and beyond.
+
+---
+
+### 🚀 Key Features
+
+- **📊 Centralised Wealth Dashboard**: Visualise your net worth trajectory, liquid cash, and total CPF balances via dynamic, interactive charts (Recharts).
+- **🏦 Advanced CPF & CPF LIFE Projections**: Accurately simulates OA, SA, MA, and RA waterfalls at age 55. Calculates CPF LIFE monthly payouts, bequest amounts, and capital recovery based on the latest 2026 statutory limits (BRS/FRS/ERS).
+- **🏠 Housing Affordability Planner (BTO/Resale)**: Calculates maximum loan quantums (LTV), Buyer's Stamp Duty (BSD), downpayments, and generates a complete monthly amortization schedule. Supports simulating mortgage payments via CPF OA vs. Cash.
+- **🧾 Income Tax Optimizer**: A precise tax calculator factoring in Singapore's progressive tax brackets and exhaustive personal reliefs (NSman, SRS, CPF Cash Top-ups, Working Mother's Child Relief, etc.).
+- **🔥 Investment & FIRE Calculator**: Compare Dollar-Cost Averaging (DCA) vs. Lump Sum strategies, and calculate the exact nest egg needed for Financial Independence, Retire Early (FIRE) using Safe Withdrawal Rates (SWR).
+- **🛡️ Policy & Gap Analysis**: Track life insurance coverage (Death, CI, TPD) against your income, and simulate hospital bill cash outlays based on the latest Integrated Shield Plan rider regulations.
+- **🛣️ Life Events Engine**: Add custom future milestones (e.g., weddings, renovations, children) and instantly see their impact on your long-term cashflow graph.
+
+---
+
+### 🛠️ Tech Stack & Architecture
+
+- **Frontend**: React.js (Vite), React Router, Recharts (Data Visualization)
+- **Backend / Database**: Supabase (PostgreSQL)
+- **Authentication & Security**: Supabase Auth, strictly enforced Row Level Security (RLS) policies for cross-user data isolation.
+- **Architecture**: Serverless Jamstack. Heavy mathematical projection loops execute client-side to minimize server costs and ensure instant UI feedback.
+- **Styling**: Pure CSS with responsive variables, glassmorphism UI, and dark-mode optimization.
+
+---
+
+### 🔐 How to Use (No Signup Required)
+
+SFC is built with user privacy and low friction in mind. You can try the entire application without creating an account.
+
+- **Guest Mode**: Simply visit the site and start typing. All your financial data and projections are saved securely in your browser's localStorage and never touch a server. 
+- **Cloud Sync**: Users who wish to sync their data across multiple devices can opt to create a free account, seamlessly migrating their local data to the Supabase cloud backend.
+
+> **Live Application**: [singaporefinancialcalculator.com](https://www.singaporefinancialcalculator.com/)
+
+---
+
+### 📝 Disclaimer
+
+*The calculations, projections, and results provided by this application are strictly for educational and informational purposes. Formulas are based on public government guidelines (CPF Board, IRAS, HDB) but may not reflect exact real-world scenarios. This tool does not constitute professional financial advice.*
+        `,
+        "demoUrl": "https://singaporefinancialcalculator.com/",
+        "githubUrl": "https://github.com/FabianHeng/FinPort",
+        "video": "sfc.mov",
+        "image": "sfc.png"
+    },
     "trackspence": {
         "title": "Trackspence",
-        "description": "An Al-powered all-in-one financial tracker that seamlessly manages expenses and income.",
+        "description": "An AI-powered all-in-one financial tracker that seamlessly manages expenses and income.",
         "tech": [
             { "type": "lang", "name": "react", "icon": "react.svg" },
             { "type": "lang", "name": "html", "icon": "html.svg" },

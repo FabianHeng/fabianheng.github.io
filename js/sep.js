@@ -83,8 +83,8 @@ const travelData = [
                 img: "img/sep/yellowstone/yellowstone3.jpg"
             },
             {
-                title: "Open Range",
-                text: "Yellowstone is huge. We arrived at a geyser basin area and it was wide open with no barriers. There were many geysers and hot springs scattered all across the open fields and it really felt like walking through a warzone. I also heard this place is infamous for \"hotpotting\", where people would wonder off paths and sneak into the hot springs.",
+                title: "A Vast Geyser Field",
+                text: "We arrived at a geyser basin area and it was wide open with no barriers. There were many geysers and hot springs scattered all across the open fields and it really felt like walking through a warzone. I also heard this place is infamous for \"hotpotting\", where people would wonder off paths and sneak into the hot springs. Some animals even died from it! We saw a few geysers erupting, shooting boiling water high into the air. It was a mesmerizing sight to behold, and we couldn't help but feel a sense of wonder at the power of nature. Walking through the geyser fields, we were surrounded by steam and the sound of bubbling water, creating an otherworldly atmosphere that was both eerie and beautiful.",
                 img: "img/sep/yellowstone/yellowstone4.jpg"
             },
         ]
