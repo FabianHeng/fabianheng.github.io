@@ -109,7 +109,7 @@ const travelData = [
             },
             {
                 title: "Wildlife Spotting",
-                text: "You can't visit Grand Teton without keeping an eye out for the local residents. As we drove along the scenic loop, we kept our eyes peeled for wildlife. While we kept a very safe and respectful distance, scanning the tree lines and open plains for moose, elk, and bears added a thrilling edge to our wilderness escape.",
+                text: "You can't visit Grand Teton without keeping an eye out for the local residents. As we drove along the scenic loop, we kept our eyes peeled for wildlife. While we kept a very safe and respectful distance, scanning the tree lines and open plains for squirrels, elk, bears, and even a wolf added a thrilling edge to our wilderness escape.",
                 img: "img/sep/teton/teton3.jpg"
             }
         ]
@@ -198,19 +198,24 @@ const travelData = [
         heroImage: "img/sep/grandcanyon/grandcanyon.jpg",
         sections: [
             {
+                title: "Pit Stop: Hoover Dam",
+                text: "Before reaching the Grand Canyon, we made a quick detour to see the Hoover Dam. The sheer scale of the dam was mind-blowing, and it was fascinating to learn about its history and engineering. It was a great way to break up the long drive and add another iconic landmark to our trip!",
+                img: "img/sep/grandcanyon/grandcanyon1.jpg"
+            },
+            {
                 title: "The Best National Park",
                 text: "The Grand Canyon officially took the crown for the best National Park I've ever visited. We drove 4 hours straight to reach the Desert View Watchtower just in time to catch the sunset. Watching the golden hour light up the vast, endless layers of red rock was a deeply spiritual and breathtaking experience.",
-                img: "img/sep/grandcanyon/grandcanyon1.jpg"
+                img: "img/sep/grandcanyon/grandcanyon2.jpg"
             },
             {
                 title: "Sunrise at Mather Point",
                 text: "We woke up freezing early the next morning to catch the sunrise at Mather Point. It was completely worth the lack of sleep to see the canyon colors change as the sun came up. Afterwards, we walked along Mohave Point and hiked down the Hermit Trail for a bit to get a different perspective before relying on the park's handy shuttle buses to see the rest.",
-                img: "img/sep/grandcanyon/grandcanyon2.jpg"
+                img: "img/sep/grandcanyon/grandcanyon3.jpg"
             },
             {
                 title: "Layers of Time",
                 text: "Staring down into the canyon, you literally see millions of years of Earth's history stacked in the rock layers. Taking some time at the visitor center to actually understand the geology made the views even more impressive. It's one thing to see a giant hole in the ground, but knowing how the Colorado River carved it out over millennia is mind-blowing.",
-                img: "img/sep/grandcanyon/grandcanyon3.jpg"
+                img: "img/sep/grandcanyon/grandcanyon4.jpg"
             }
         ]
     },
@@ -249,12 +254,12 @@ const travelData = [
         sections: [
             {
                 title: "The SEP Dream Realized",
-                text: "New York City was literally the place that made me decide to come to the US for my SEP. Walking these streets felt surreal. I aggressively checked off my bucket list: honoring the memorial at the World Trade Center, looking down from the Empire State Building, taking the ferry to see the Statue of Liberty, and, of course, surviving on classic NYC dollar pizza!",
+                text: "New York City was literally the place that made me decide to come to the US for my SEP. Walking these streets felt surreal. I aggressively checked off my bucket list: honoring the memorial at the World Trade Center, looking down from the Empire State Building, taking the ferry to see the Statue of Liberty, walking down Wall Street, and, of course, surviving on classic NYC dollar pizza!",
                 img: "img/sep/nyc/nyc1.jpg"
             },
             {
                 title: "Broadway and Flushing",
-                text: "I treated myself to a Broadway show, which happened to star the incredible actress who played the wife in 'The Greatest Showman', what a performance! Later, we took the train out to Flushing, Queens to see its massive Chinatown. The culture shock was real; the signs, the food, and the bustling crowds made me feel like I had been teleported straight to China.",
+                text: "I treated myself to a Broadway show at Times Square, which happened to star the incredible actress who played the wife in 'The Greatest Showman', what a performance! Later, we took the train out to Flushing, Queens to see its massive Chinatown. The culture shock was real; the signs, the food, and the bustling crowds made me feel like I had been teleported straight to China.",
                 img: "img/sep/nyc/nyc2.jpg"
             },
             {
@@ -303,14 +308,19 @@ const travelData = [
                 img: "img/sep/chicago/chicago1.jpg"
             },
             {
-                title: "Rivers and Museums",
-                text: "Despite the freezing temperatures, we took the Chicago river boat cruise to explore the downtown architecture, a must-do that offered incredible views of the skyline. We also spent time wandering through the snowy paths of Lincoln Park and warmed up inside the newly renamed Kenneth C. Griffin Museum of Science and Industry, which had amazing interactive exhibits.",
+                title: "The Chicago River Cruise",
+                text: "Despite the freezing temperatures, we took the Chicago river boat cruise to explore the downtown architecture, a must-do that offered incredible views of the skyline. It was a unique experience to see the city from the water while bundled up in the cold. The contrast of the chilly air and the stunning cityscape made it a memorable way to take in the sights of Chicago.",
                 img: "img/sep/chicago/chicago2.jpg"
+            },
+            {
+                title: "Museums and Parks",
+                text: "We also spent time wandering through the snowy paths of Lincoln Park and warmed up inside the newly renamed Kenneth C. Griffin Museum of Science and Industry, which had amazing interactive exhibits. The animal exhibits were still operating despite the cold, which was amazing!",
+                img: "img/sep/chicago/chicago3.jpg"
             },
             {
                 title: "Deep Dish Devotion",
                 text: "You can't go to Chicago without trying their world-famous deep-dish pizza. After a long day of freezing in the snow, sitting down to a massive, cheese-pulling slice of thick-crust pizza was life-changing. It was more like eating a savory pie than a pizza, and it was exactly the hearty meal we needed.",
-                img: "img/sep/chicago/chicago3.jpg"
+                img: "img/sep/chicago/chicago4.jpg"
             }
         ]
     },
@@ -324,18 +334,23 @@ const travelData = [
         sections: [
             {
                 title: "Navigating the New World",
-                text: "San Francisco was my very first taste of America before heading down to Texas. Being my first time in the US, there was a massive learning curve! From figuring out the public transport systems like BART and the iconic cable cars, to desperately trying to understand the tipping culture at restaurants, it was a culture shock, but a fun one.",
+                text: "San Francisco was my very first taste of America before heading down to Texas. Being my first time in the US, there was a massive learning curve! From figuring out the public transport systems like BART, exploring Costco and their world-famous hotdogs, to desperately trying to understand the tipping culture at restaurants, it was a culture shock, but a fun one.",
                 img: "img/sep/sf/sf1.jpg"
             },
             {
-                title: "Giants of the Forest",
-                text: "We took a trip out to see the coastal redwoods, which was a huge highlight for me. I love visiting sequoia trees, and it was fascinating to compare the two. Standing beneath these towering giants, breathing in the fresh, earthy air, made me feel incredibly small in the best way possible.",
+                title: "The Famous Pier 39",
+                text: "The famous Pier 39 was a lively and bustling spot filled with shops, restaurants, and street performers. We had fun exploring the area, watching people ride rollercoasters, and of course, watching the sea lions lounging on the docks. The vibrant atmosphere and waterfront views made it a memorable part of our San Francisco experience.",
                 img: "img/sep/sf/sf2.jpg"
             },
             {
-                title: "Seafood Sensations",
-                text: "The food scene in SF completely won me over, especially the seafood! Exploring the waterfront areas and Fisherman's Wharf, we indulged in some incredibly fresh catches. Trying the classic clam chowder served inside a freshly baked sourdough bread bowl is a memory my tastebuds will never forget.",
+                title: "Giants of the Forest",
+                text: "We took a trip out to Muir Woods to see the coastal redwoods, which was a huge highlight for me. I love visiting sequoia trees, and it was fascinating to compare the two. Standing beneath these towering giants, breathing in the fresh, earthy air, made me feel incredibly small in the best way possible.",
                 img: "img/sep/sf/sf3.jpg"
+            },
+            {
+                title: "Seafood Sensations",
+                text: "The food scene in SF completely won me over, especially the seafood! Exploring the waterfront areas and Fisherman's Wharf, we indulged in some incredibly fresh catches. Trying the classic clam chowder served inside a freshly baked sourdough bread bowl is a memory my tastebuds will never forget. However, the food was quite pricey, so we had to be strategic about where we ate to stay within budget.",
+                img: "img/sep/sf/sf4.jpg"
             }
         ]
     }
