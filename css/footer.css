@@ -78,6 +78,9 @@ footer img {
 }
 
 .email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     font-size: 1.1em;
 }
 
