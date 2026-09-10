@@ -514,6 +514,27 @@ a:hover {
     border-right: 2px solid rgba(var(--grey), 1);
 }
 
+.splash-cv-link {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: rgba(var(--grey), 1);
+    transition: all 0.3s ease;
+}
+
+.splash-cv-link i {
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.splash-cv-link:hover {
+    color: rgba(var(--blue), 1);
+}
+
+.splash-cv-link:hover i {
+    transform: translateX(4px);
+}
+
 .splash-down-arrow {
     margin-top: 30px;
     font-size: 20px;

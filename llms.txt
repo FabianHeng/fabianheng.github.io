@@ -1,0 +1,22 @@
+# Fabian Heng
+
+> Software Engineer (Full-Stack and DevOps) and NUS Computer Science graduate based in Singapore. This site is my personal portfolio.
+
+## CV / Resume
+
+- [Curriculum Vitae (Markdown, canonical)](https://fabianheng.me/cv.md): Full machine-readable CV covering experience, projects, education, skills and certifications.
+- [Curriculum Vitae (HTML)](https://fabianheng.me/cv.html): Same content rendered for people.
+- [Resume PDF (1 page)](https://fabianheng.me/files/Fabian_Resume.pdf)
+- [Full CV PDF](https://fabianheng.me/files/Fabian_CV.pdf)
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/fabianheng/)
+- [GitHub](https://github.com/FabianHeng)
+- [Appsol (software consultancy)](https://appsol.sg)
+
+## Portfolio
+
+- [Projects](https://fabianheng.me/index.html)
+- [Life & involvements](https://fabianheng.me/life.html)
+- [Sitemap](https://fabianheng.me/sitemap.xml)
