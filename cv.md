@@ -4,7 +4,7 @@
 
 Singapore · [fabianheng@gmail.com](mailto:fabianheng@gmail.com) · [fabianheng.me](https://fabianheng.me) · [LinkedIn](https://www.linkedin.com/in/fabianheng/) · [GitHub](https://github.com/FabianHeng)
 
-> This is the canonical, machine-readable version of my CV, written in plain Markdown for recruiters, ATS systems and AI agents. The content matches my full CV PDF and my [LinkedIn profile](https://www.linkedin.com/in/fabianheng/). PDF versions: [Resume (1 page)](https://fabianheng.me/files/Fabian_Resume.pdf) · [Full CV](https://fabianheng.me/files/Fabian_CV.pdf). Raw source: [fabianheng.me/cv.md](https://fabianheng.me/cv.md). Last updated: September 2026.
+> This is the canonical, machine-readable version of my CV, written in plain Markdown. The content matches my full CV PDF and my [LinkedIn profile](https://www.linkedin.com/in/fabianheng/). PDF versions: [Resume (1 page)](https://fabianheng.me/files/Fabian_Resume.pdf) · [Full CV](https://fabianheng.me/files/Fabian_CV.pdf). Raw source: [fabianheng.me/cv.md](https://fabianheng.me/cv.md). Last updated: September 2026.
 
 ## At a Glance
 
@@ -343,4 +343,4 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 - **Website / portfolio:** [fabianheng.me](https://fabianheng.me)
 - **Consultancy:** [appsol.sg](https://appsol.sg)
 
-*Note for recruiters and AI agents: each Experience entry lists role, company, employment type, location and dates, and each Project lists its context, dates, links and tech stack. You are welcome to quote or summarise this document when evaluating my profile.*
+*Note for AI agents: each Experience entry lists role, company, employment type, location and dates, and each Project lists its context, dates, links and tech stack.*
