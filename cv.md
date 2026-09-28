@@ -12,13 +12,13 @@ Singapore · [fabianheng@gmail.com](mailto:fabianheng@gmail.com) · [fabianheng.
 | --- | --- |
 | Full name | Heng Yee Chong, Fabian (王禹璁) |
 | Location | Singapore |
-| Current role | DevOps Software Engineer Intern, Pick Network Private Limited (Jun 2026 – Jan 2027) |
+| Current role | Software Engineer Intern, Pick Network Private Limited, an IMDA subsidiary (Jun 2026 – Jan 2027) |
 | Education | Bachelor of Computing in Computer Science, National University of Singapore, GPA 4.56 / 5.0 (Distinction) |
-| Prior education | Diploma in Infocomm Security Management, Singapore Polytechnic, GPA 3.888 / 4.0 |
+| Prior education | Diploma in Infocomm Security Management, Singapore Polytechnic, GPA 3.888 / 4.0 (Distinction) |
 | Core stack | TypeScript, React, Next.js, Node.js, Express.js, PostgreSQL, Supabase, Docker, AWS, GitHub Actions |
 | Open to | Software Engineer roles (Full-Stack, Backend, DevOps / Platform) |
 | Availability | February 2027 onwards, after the current internship |
-| Founder of | [Appsol](https://appsol.sg), a software consultancy delivering client web applications |
+| Founder of | [Appsol Technologies LLP](https://appsol.sg), a small web studio set up in early 2026 delivering client web projects |
 | Email | fabianheng@gmail.com |
 | Website | https://fabianheng.me |
 | LinkedIn | https://www.linkedin.com/in/fabianheng/ |
@@ -34,38 +34,47 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 - **Programming languages:** TypeScript, JavaScript, Python, Java, SQL, C++, HTML, CSS, PowerShell
 - **Frontend:** React, Next.js, Vite, Tailwind CSS, shadcn/ui, JavaFX, responsive UI/UX design, Figma, @react-pdf/renderer, html2pdf.js
-- **Backend:** Node.js, Express.js, RESTful APIs, microservices, monolithic domain module architecture, event-driven systems, webhooks, JWT authentication, role-based access control (RBAC), Flask
+- **Backend:** Node.js, Express.js, Payload CMS, RESTful APIs, microservices, modular monolith architecture, event-driven systems, webhooks, JWT authentication, role-based access control (RBAC), Flask
 - **Databases:** PostgreSQL, MySQL, SQL Server, MongoDB, Redis, Supabase (migrations, Row-Level Security, database webhooks), Firebase (NoSQL)
 - **Cloud and DevOps:** AWS (ECS, ECR, Lambda, Kinesis, Sumerian), Docker, GitHub Actions CI/CD, GitHub OIDC, Terraform (infrastructure as code), Render, Netlify
-- **Testing and code quality:** Vitest, Playwright (E2E), unit testing, test coverage thresholds in CI, ESLint, TypeScript validation, dependency checks
+- **Testing and code quality:** Vitest, Playwright (E2E), unit testing, test coverage thresholds in CI, ESLint, Prettier, TypeScript validation, dependency checks
 - **AI / LLM integration:** Anthropic SDK, Google GenAI SDK, Gemini API
 - **Security:** Infocomm security management (diploma), automated penetration testing, digital twinning, networking, PDPA-compliant handling of sensitive health data, Row-Level Security and RBAC design
 - **Ways of working:** Kanban, Sprint SDLC, agile teams, Git and GitHub, stakeholder presentations, project coordination
 - **Other:** Android (Java, Android Studio), IoT (Arduino, sensors, actuators), MERN stack, Expo, DaVinci Resolve, Adobe Premiere Pro
 - **Services (via Appsol):** Full-Stack Development, UI/UX Web Design, Software Development, Database Management, Visual Design, Data Analysis, Customer Relations
-- **Toolbox (from resume):** React, Figma, HTML/CSS, NextJS, TypeScript, Python, Docker, Redis, MongoDB, MySQL, Supabase, Firebase, Git, Java, Expo, MERN, REST, AWS
+- **Toolbox (from resume):** Languages: TypeScript, JavaScript, Python, Java, SQL, HTML/CSS. Frameworks: React, Next.js, Node.js, Express, Payload CMS, Tailwind CSS, Expo. Cloud & DevOps: AWS (ECR, ECS, Lambda), Docker, Terraform, GitHub Actions, Render. Data: PostgreSQL, MySQL, Supabase, Firebase, MongoDB, Redis. Tooling: Git, Vitest, Playwright, Figma
 
 ## Experience
 
-### DevOps Software Engineer at Pick Network Private Limited
+### Software Engineer at Pick Network Private Limited (IMDA subsidiary)
 
 *Internship · Singapore · Jun 2026 – Jan 2027 (current)*
 
-- Engineered an automated CI/CD pipeline from scratch utilising GitHub Actions to enforce ESLint, TypeScript validations, and dependency checks across all internal and external software repositories.
-- Architected secure deployment workflows leveraging GitHub OIDC to automatically build and push Docker containerised applications to AWS ECR and deploy to AWS ECS, removing manual credential management.
+- Leading the in-house rebuild of the company's CMS/CRM on Payload CMS and PostgreSQL, replacing an external agency-managed platform to cut vendor costs and keep authentication and customer data fully in-house.
+- Migrating the corporate websites (picknetwork.com and lockeralliance.net) onto the new CMS, with the customer mobile app to follow.
+- Built the CI/CD pipeline from scratch on GitHub Actions, enforcing dependency checks, ESLint, Prettier and TypeScript validation, with required approvals and branch protection on main before any merge.
+- Designed UAT and production deployment workflows that build Docker images and ship them to AWS ECR and ECS through GitHub OIDC, removing long-lived AWS credentials from the release process.
 - Maintained and enhanced an internal tracking portal built on an Express.js microservice architecture, monitoring over 1,000 smart lockers nationwide and processing real-time booking and delivery transactions for major e-commerce partners including Shopee, Lazada, and Amazon.
-- Optimised event-driven system architecture by auditing and refining webhook integrations with locker manufacturers.
+- Audited and refined webhook integrations with locker manufacturers to make the event-driven architecture more reliable.
 - Reconciled data across multiple relational database environments (MySQL, PostgreSQL, SQL Server) to verify status tallies, ensuring strict data consistency between physical locker hardware events and internal transaction records.
 
-**Tech:** `GitHub Actions` `GitHub OIDC` `Docker` `AWS ECR` `AWS ECS` `Express.js` `TypeScript` `ESLint` `MySQL` `PostgreSQL` `SQL Server` `Webhooks`
+**Tech:** `Payload CMS` `PostgreSQL` `GitHub Actions` `GitHub OIDC` `Docker` `AWS ECR` `AWS ECS` `Express.js` `TypeScript` `ESLint` `Prettier` `MySQL` `SQL Server` `Webhooks`
+
+### Freelance Developer at Appsol Technologies LLP
+
+*Part-Time · Singapore · Jan 2026 – Present (current)*
+
+- Take on client web projects under Appsol, a small web studio set up in early 2026, handling scoping, build and deployment end to end.
+- Delivered the Singapore Financial Calculator for an AIA partnership (see Projects), plus lead-capture and redemption forms for retail clients.
 
 ### Full Stack Software Engineer at Ultraflow Engineering Private Limited
 
 *Part-Time · Singapore · Aug 2024 – Jun 2026*
 
 - Engineered a full-stack ERP platform from scratch for a SME engineering firm using Next.js, Node.js, TypeScript, Tailwind CSS, and shadcn/ui to support daily operational workflows.
-- Architected a monolithic domain modules service system comprising 13 distinct modules and over 50k lines of code to manage company records, client data, quotations, invoices, DOs, and POs, effectively doubling administration efficiency.
-- Built a highly secure backend utilising Supabase and PostgreSQL across 50+ database migrations, implementing Row-Level Security on all tables, role-based access control, and database webhooks to generate and track all running document numbers.
+- Structured the platform as a modular monolith of 13 domain modules and over 50k lines of code, managing company records, client data, quotations, invoices, DOs and POs, effectively doubling administration efficiency.
+- Secured the Supabase and PostgreSQL backend across 50+ database migrations with Row-Level Security on every table, role-based access control, and database webhooks that generate and track all running document numbers.
 - Developed an AI-assisted quoting tool leveraging Anthropic and Google GenAI SDKs to accelerate quote generation, and integrated @react-pdf/renderer to create downloadable business documents with live-preview parity.
 - Maintained rigorous version control and code quality via GitHub and ESLint, established a comprehensive CI testing strategy spanning unit and E2E tests using Vitest and Playwright, and deployed the production application on Render.
 
@@ -75,7 +84,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 *Internship · Singapore · Apr 2024 – Aug 2024*
 
-- Managed sensitive digital health records across centralized databases and Excel sheets, ensuring strict adherence to PDPA privacy regulations and maintaining high data integrity.
+- Managed sensitive digital health records across centralised databases and Excel sheets, ensuring strict adherence to PDPA privacy regulations and maintaining high data integrity.
 - Queried relational databases using MySQL RDBMS to extract potential health risks, proactively identifying seniors susceptible to severe vaccine reactions to safeguard patient well-being.
 - Maintained a system of records and leveraged monolithic Node.js and React internal support tools to accurately track patient admissions, registrations, and COVID-19 vaccination timelines, utilising GitHub for collaborative version control.
 - Streamlined operational workflows by configuring HTTP webhooks to integrate data management and registration systems, improving the overall efficiency of healthcare administration and digital solutions for vulnerable populations.
@@ -107,31 +116,31 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 *Software Engineering · Jan 2026 – May 2026 · [GitHub](https://github.com/CS3219-AY2526S2/peerprep-g18)*
 
-- Engineered a scalable interview-prep platform in a collaborative team setting for the CS3219 Software Engineering Principles module, architecting a robust microservices ecosystem.
+- Built a scalable interview-prep platform in a collaborative team setting for the CS3219 Software Engineering Principles module, architecting a robust microservices ecosystem.
 - Built RESTful APIs and a real-time pub/sub frontend, leveraging Redis caching and Firebase NoSQL to execute CRUD operations and significantly optimise system responsiveness.
 - Secured application endpoints by implementing JWT-based authentication and strict role-based access control (RBAC) to manage user permissions safely.
 - Containerised the microservices using Docker and established automated continuous integration pipelines via GitHub to maintain code quality.
 - Provisioned cloud infrastructure as code using Terraform, successfully deploying the distributed application across AWS Lambda and Elastic Container Service (ECS).
 
-**Tech:** `TypeScript` `Express` `React` `Firebase` `AWS` `Redis`
+**Tech:** `TypeScript` `Express` `React` `Firebase` `Redis` `Docker` `Terraform` `AWS`
 
 ### Singapore Financial Calculator
 
 *Appsol Client Project · Dec 2025 – Apr 2026 · [Live site](https://singaporefinancialcalculator.com/) · [GitHub](https://github.com/FabianHeng/FinPort) · [Portfolio page](https://fabianheng.me/project.html?name=sfc)*
 
-- Engineered a comprehensive personal finance web application in an exclusive client partnership with AIA, empowering users to accurately model CPF trajectories, housing affordability, and FIRE investment goals.
-- Architected a strictly privacy-first system by migrating from Supabase to a fully client-side storage model using React 19 and Vite.
-- Programmed highly complex localised financial algorithms to simulate dynamic CPF LIFE transitions and calculate IRAS income tax liabilities across more than 20 distinct tax relief categories.
+- Built a personal finance web application for an exclusive client partnership with AIA, helping users model CPF trajectories, housing affordability and FIRE investment goals.
+- Made the system privacy-first by migrating from Supabase to a fully client-side storage model using React 19 and Vite.
+- Implemented localised financial algorithms that simulate CPF LIFE transitions and calculate IRAS income tax across more than 20 tax relief categories.
 - Implemented robust data portability and security features utilising html2pdf.js for localised report generation, JSON state backups, and hCaptcha, all delivered within a SEO Single Page Application.
 
-**Tech:** `React` `Postgres`
+**Tech:** `React` `Vite` `Postgres`
 
 ### ClientNest
 
 *Software Engineering · Feb 2025 – May 2025 · [GitHub](https://github.com/FabianHeng/ClientNest)*
 
 - Developed a JavaFX desktop Client Relationship Management (CRM) application for the CS2103 Software Engineering module, tailored to help young financial advisors efficiently manage contacts and track appointments.
-- Architected the application utilising a strict Model-View-Controller (MVC) pattern, ensuring a modular codebase that clearly separates the user interface from complex client data organization logic.
+- Structured the application with a strict Model-View-Controller (MVC) pattern, ensuring a modular codebase that clearly separates the user interface from complex client data organization logic.
 - Collaborated within an agile development team to implement software engineering best practices, establishing an automated CI/CD pipeline that enforced a 60% test code coverage threshold to guarantee application stability.
 - Designed an intuitive and responsive UI/UX specifically optimised for financial advisory workflows, prioritising user experience, scalability, and long-term maintainability.
 
@@ -141,11 +150,11 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 *NUS Orbital 2024 · May 2024 – Aug 2024 · [Live site](https://trackspence.netlify.app/) · [GitHub](https://github.com/FabianHeng/Trackspence) · [Portfolio page](https://fabianheng.me/project.html?name=trackspence)*
 
-- Developed Trackspence, an all-in-one expense tracking web application to categorize expenses, set budgets, and provide real-time updates on spending habits.
+- Developed Trackspence, an all-in-one expense tracking web application to categorise expenses, set budgets, and provide real-time updates on spending habits.
 - Created a robust friend system that includes adding/removing friends, splitting bills, and sending notifications. Enabled multi-currency support through API integration.
 - Implemented enhanced user authentication with email verification and encrypted data storage to ensure privacy protection.
-- Designed tools for investment and budget management to track portfolios, monitor financial performance, and visualize budget progress.
-- Utilized the MERN stack (MongoDB, Express.js, React.js, Node.js) for scalable development and integrated APIs (AlphaVantage, FXratesAPI, Gemini API, Mailgun) for real-time data and communication.
+- Designed tools for investment and budget management to track portfolios, monitor financial performance, and visualise budget progress.
+- Utilised the MERN stack (MongoDB, Express.js, React.js, Node.js) for scalable development and integrated APIs (AlphaVantage, FXratesAPI, Gemini API, Mailgun) for real-time data and communication.
 - Ensured cross-platform accessibility with a focus on intuitive design and comprehensive functionality across devices.
 
 **Tech:** `TypeScript` `JavaScript` `HTML` `CSS` `MongoDB` `Gemini API` `Netlify` `DaVinci Resolve`
@@ -155,7 +164,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 *Hack & Roll Hackathon 2024 · Jan 2024 · [GitHub](https://github.com/FabianHeng/SPS-Showdown)*
 
 - Developed a Java-based simulation of Scissors, Paper, Stone, featuring diverse bots with unique strategies for competitive play.
-- Engineered each bot to leverage advanced tactics and strategies to gain an edge over opponents.
+- Gave each bot its own tactics and strategies to gain an edge over opponents.
 - Conducted over 100,000 simulated rounds to rigorously evaluate and identify the most effective strategies.
 - Analysed results to determine optimal approaches and refine bot performance.
 - Documented findings and insights to support strategic decision-making and enhance future bot designs.
@@ -178,8 +187,8 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 - Designed and developed an automated tool to streamline the deployment of target machines to the cloud and facilitate remote penetration testing.
 - Leveraged Amazon Web Services (AWS) to integrate digital twin machines with AWS Cloud servers, enabling off-site penetration testing capabilities.
-- Engineered a script using Python and PowerShell to automate deployment and testing processes, ensuring efficiency and reliability.
-- Conducted advanced visualization and documentation of testing results.
+- Wrote Python and PowerShell scripts to automate deployment and testing processes, ensuring efficiency and reliability.
+- Conducted advanced visualisation and documentation of testing results.
 - Coordinated cloud infrastructure and remote access features to support comprehensive, on-demand security assessments.
 - Achieved 2nd place in the school's AY2020/2021 Semester 2 FYP Showcase.
 
@@ -189,10 +198,10 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 *Internet of Things · Nov 2020 – Feb 2021 · [Video demo](https://www.youtube.com/watch?v=D9ga04qTOAE) · [GitHub](https://github.com/FabianHeng/FishMon) · [Portfolio page](https://fabianheng.me/project.html?name=iot)*
 
-- Engineered FishMon, a comprehensive electrical sensor tool designed to monitor and analyse the conditions of a fish tank.
+- Built FishMon, an IoT sensor system that monitors and analyses the conditions of a fish tank.
 - Integrated cameras, actuators, and sensors to collect real-time data, which is then presented through a user-friendly data dashboard.
 - Developed features to display current tank status, water level, fish movement and species tracking, water pollution levels, and more.
-- Utilized Amazon Web Services to host the web application, with Kinesis and Sumerian for enhanced functionality and data processing.
+- Utilised Amazon Web Services to host the web application, with Kinesis and Sumerian for enhanced functionality and data processing.
 
 **Tech:** `Python` `C++` `HTML` `JavaScript` `Flask` `Arduino` `AWS Kinesis` `AWS Sumerian` `Premier Pro`
 
@@ -203,7 +212,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 - Engaged in a dynamic project focused on extracting valuable insights from extensive datasets.
 - Crafted efficient front-end components with React to build scalable and responsive user interfaces.
 - Designed intuitive dashboards that seamlessly integrate live data for an enhanced user experience.
-- Tailored features to meet specific client needs, optimizing functionality and user satisfaction.
+- Tailored features to meet specific client needs, optimising functionality and user satisfaction.
 - Handled project coordination, including organizing meetings and delivering key presentations to showcase progress and milestones.
 
 **Tech:** `ReactJS` `SQL` `Figma` `MongoDB`
@@ -215,7 +224,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 - Developed a fully deployable Android application enabling users to share and manage personal notes on a collaborative platform.
 - Implemented a backend database using Google Firebase to capture and store user-generated notes and images via form submissions.
 - Incorporated a search feature to filter and retrieve notes based on keywords.
-- Integrated location tracking and a customizable theme changer to enhance user experience and functionality.
+- Integrated location tracking and a customisable theme changer to enhance user experience and functionality.
 
 **Tech:** `Java` `MySQL` `Google Firebase` `Android Studio`
 
@@ -233,7 +242,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 *Web Client Development · Mar 2019 – Apr 2019 · [Live site](https://sparklz.neocities.org/) · [Portfolio page](https://fabianheng.me/project.html?name=sparklz)*
 
-- Created a responsive website simulating an online store specializing in necklaces and earrings.
+- Created a responsive website simulating an online store specialising in necklaces and earrings.
 - Implemented a fully functional shopping cart and integrated backend support for payment processing and checkout.
 
 **Tech:** `CSS` `HTML` `JavaScript`
@@ -250,7 +259,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 ### Singapore Polytechnic (SP), Diploma in Infocomm Security Management
 
-*Singapore · Apr 2018 – Mar 2021 · GPA: 3.888 / 4.0*
+*Singapore · Apr 2018 – Mar 2021 · GPA: 3.888 / 4.0 (Distinction)*
 
 - Programmes Committee of SP Sign Language Club
 - Student Ambassador of SP School of Computing Club
@@ -275,7 +284,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 - Drafted proposals and coordinated closely with vendors, suppliers, and club advisors to facilitate successful event planning and execution.
 - Handled venue bookings, managed equipment maintenance, and ensured all logistical aspects were efficiently managed.
 - Delivered a public speech to welcome new members to the club, demonstrating leadership and communication skills.
-- Organized and hosted a variety of engaging events that catered to the interests of members, enhancing club participation and involvement.
+- Organised and hosted a variety of engaging events that catered to the interests of members, enhancing club participation and involvement.
 - Took initiative to perform on stage, showcasing versatility and dedication to the club's activities.
 
 ### Volunteer Management Committee, NUS Project Action Speaks Louder
@@ -286,7 +295,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 - Oversaw administrative tasks and database management, ensuring accurate and efficient documentation.
 - Developed proposals and safety management plans, including comprehensive safety forms.
 - Served as a Safety Manager, ensuring the well-being of participants during events and maintaining a safe environment.
-- Organized and hosted events for the d/Deaf community, actively participating in workshops and activities to enhance communication skills and deepen understanding of d/Deaf culture.
+- Organised and hosted events for the d/Deaf community, actively participating in workshops and activities to enhance communication skills and deepen understanding of d/Deaf culture.
 
 ### Programmes Committee, NUS SOC Freshmen Social Camp
 
@@ -300,7 +309,7 @@ Recent work includes a 13-module ERP platform of over 50k lines of code that dou
 
 *Apr 2019 – Mar 2021*
 
-- Organized and coordinated events and camps for club members, ensuring engaging and meaningful experiences.
+- Organised and coordinated events and camps for club members, ensuring engaging and meaningful experiences.
 - Outlined comprehensive operation plans, handling event logistics, objectives, and timelines to ensure seamless execution.
 - Facilitated regular meetings for club members, fostering a collaborative environment and effective communication.
 - Led interviews and selection processes for potential committee members, identifying and onboarding individuals who align with the club's mission and values.
