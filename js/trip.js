@@ -108,6 +108,8 @@
     const route = chaptersEl.querySelector('.trip-route');
     const chapters = Array.from(chaptersEl.querySelectorAll('.chapter'));
     const visible = new Set();
+    // Hero parallax is handled in CSS where scroll-driven animations exist
+    const cssParallax = window.CSS && CSS.supports('animation-timeline: view()');
     let ticking = false;
 
     function update() {
@@ -128,7 +130,7 @@
 
         if (!motion) return;
 
-        if (y < hero.offsetHeight) {
+        if (!cssParallax && y < hero.offsetHeight) {
             const ratio = y / hero.offsetHeight;
             heroMedia.style.transform = `translate3d(0, ${y * 0.35}px, 0)`;
             heroContent.style.transform = `translate3d(0, ${y * 0.15}px, 0)`;

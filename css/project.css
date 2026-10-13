@@ -146,6 +146,10 @@ html.motion .p-hero [data-hero] {
     transform: translate3d(0, 28px, 0);
 }
 
+html.motion .p-hero .p-hero-row {
+    transform: translate3d(0, -28px, 0);
+}
+
 html.motion.is-loaded .p-hero [data-hero] {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -194,6 +198,15 @@ html.motion.is-loaded .p-media {
     clip-path: inset(0 0 0 0 round 18px);
     opacity: 1;
     transition: clip-path 1.4s var(--ease-out-quint) 450ms, opacity 0.8s var(--ease-out-quart) 450ms;
+}
+
+/* Zoom Demo (toggled by ZOOM_DEMO in js/project.js) */
+.p-media.is-zoom {
+    z-index: 5;
+}
+
+html.motion .p-media.is-zoom {
+    --stage: 1;
 }
 
 /* Section Index */
@@ -720,6 +733,10 @@ html.motion .p-section.is-in::after {
 }
 
 @media screen and (max-width: 768px) {
+    .p-progress {
+        display: none;
+    }
+
     .p-hero {
         padding-top: 16px;
     }

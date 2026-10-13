@@ -28,6 +28,7 @@ html.motion {
     height: 92vh;
     height: 92svh;
     min-height: 520px;
+    --hero-h: max(92svh, 520px);
     overflow: hidden;
     color: rgba(var(--white), 1);
     background: rgba(var(--black), 1);
@@ -192,6 +193,37 @@ html.motion.is-loaded .trip-hero [data-hero] {
     transition:
         opacity 1s var(--ease-out-quint) var(--d, 0ms),
         transform 1.2s var(--ease-out-quint) var(--d, 0ms);
+}
+
+/* Hero Parallax (scroll-driven, runs off the main thread) */
+@supports (animation-timeline: view()) {
+    html.motion .trip-hero {
+        view-timeline: --trip-hero block;
+    }
+
+    html.motion .trip-hero-media,
+    html.motion .trip-hero-content {
+        animation: linear both;
+        animation-timeline: --trip-hero;
+        animation-range: exit 0% exit 100%;
+    }
+
+    html.motion .trip-hero-media {
+        animation-name: trip-hero-media;
+    }
+
+    html.motion .trip-hero-content {
+        animation-name: trip-hero-content;
+    }
+}
+
+@keyframes trip-hero-media {
+    to { transform: translate3d(0, calc(var(--hero-h) * 0.35), 0); }
+}
+
+@keyframes trip-hero-content {
+    71% { opacity: 0; }
+    to { transform: translate3d(0, calc(var(--hero-h) * 0.15), 0); opacity: 0; }
 }
 
 /* Intro */
@@ -582,8 +614,13 @@ html.motion .chapter.is-settled .chapter-media img {
 }
 
 @media (max-width: 768px) {
+    .trip-progress {
+        display: none;
+    }
+
     .trip-hero {
         min-height: 460px;
+        --hero-h: max(92svh, 460px);
     }
 
     .trip-back {

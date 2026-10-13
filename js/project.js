@@ -2,6 +2,8 @@
     const root = document.documentElement;
     const motion = root.classList.contains('motion');
     const pad = n => String(n).padStart(2, '0');
+    // Demo zooms to full width when centered on screen; set false to revert
+    const ZOOM_DEMO = true;
 
     function el(tag, className, html) {
         const node = document.createElement(tag);
@@ -208,6 +210,7 @@
 
     const progress = document.querySelector('.p-progress');
     const media = document.querySelector('.p-media');
+    const zoom = ZOOM_DEMO && motion;
     const sectionEls = Array.from(content.querySelectorAll('.p-section'));
     let ticking = false;
 
@@ -218,8 +221,28 @@
         const max = document.documentElement.scrollHeight - vh;
         progress.style.setProperty('--progress', max > 0 ? Math.min(y / max, 1) : 0);
 
-        // Demo grows to full size as it rises into view
-        if (motion) {
+        if (zoom) {
+            // Demo peaks at full width when centered, eases back off-center
+            const vw = root.clientWidth;
+            const mobile = vw <= 768;
+            media.classList.toggle('is-zoom', !mobile);
+            if (mobile) {
+                media.style.setProperty('--stage', 1);
+            } else {
+                // Grows downward from its top edge, so the hero above stays clear
+                const h = media.offsetHeight;
+                const top = media.getBoundingClientRect().top + y;
+                const peak = Math.max(1, Math.min((vw - 32) / media.offsetWidth, vh * 0.92 / h));
+                const yPeak = Math.max(top - (vh - peak * h) / 2, vh * 0.35);
+                const rampIn = Math.min(yPeak, vh * 0.6);
+                const t = y < yPeak
+                    ? Math.max(0, 1 - (yPeak - y) / rampIn)
+                    : Math.max(0, 1 - (y - yPeak) / (vh * 0.6));
+                const ease = t * t * (3 - 2 * t);
+                media.style.setProperty('--stage', (1 + (peak - 1) * ease).toFixed(4));
+            }
+        } else if (motion) {
+            // Demo grows to full size as it rises into view
             const rect = media.getBoundingClientRect();
             const t = Math.max(0, Math.min((vh - rect.top) / (vh * 0.7), 1));
             media.style.setProperty('--stage', (0.9 + t * 0.1).toFixed(4));
