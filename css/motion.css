@@ -1,0 +1,93 @@
+/* Page Transition */
+html.motion::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background-color: rgba(var(--white), 1);
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.8s var(--ease-out-quart);
+}
+
+html.motion.is-loaded::after {
+    opacity: 0;
+}
+
+html.motion.is-leaving::after {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s var(--ease-out-quart);
+}
+
+.nav {
+    transition: transform 0.5s var(--ease-in-out-quart), opacity 0.5s var(--ease-in-out-quart);
+}
+
+html.motion.is-leaving-up .nav {
+    transform: translateY(-80px);
+    opacity: 0;
+}
+
+/* View Transition */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+}
+
+.nav {
+    view-transition-name: nav;
+}
+
+/* Scroll Reveal */
+html.motion [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, var(--reveal-y, 64px), 0);
+}
+
+html.motion [data-reveal].is-revealed {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition:
+        opacity 1s var(--ease-out-quint) var(--reveal-delay, 0ms),
+        transform 1.2s var(--ease-out-quint) var(--reveal-delay, 0ms);
+}
+
+/* Nav Pill */
+.nav-middle.is-ready .nav-pill-outline {
+    display: block;
+    left: 0;
+    right: auto;
+    width: var(--pill-w, 90px);
+    transform: translateX(var(--pill-x, 0px));
+    transition: transform 0.5s var(--ease-out-quint), width 0.5s var(--ease-out-quint), opacity 0.4s var(--ease-out-quart);
+}
+
+.nav-middle.is-ready .nav-pill-glow {
+    display: block;
+    margin-left: 0;
+    transform: translateX(var(--glow-x, 38px));
+    transition: transform 0.5s var(--ease-out-cubic), opacity 0.4s var(--ease-out-quart);
+}
+
+.nav-middle.is-ready.is-empty .nav-pill-outline,
+.nav-middle.is-ready.is-empty .nav-pill-glow {
+    opacity: 0;
+}
+
+.nav-middle.no-transition .nav-pill-outline,
+.nav-middle.no-transition .nav-pill-glow {
+    transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
+    }
+}

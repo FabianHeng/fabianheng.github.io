@@ -58,8 +58,8 @@ SFC is built with user privacy and low friction in mind. You can try the entire 
         `,
         "demoUrl": "https://singaporefinancialcalculator.com/",
         "githubUrl": "https://github.com/FabianHeng/FinPort",
-        "video": "sfc.mov",
-        "image": "sfc.png"
+        "video": "sfc.mp4",
+        "image": "sfc.webp"
     },
     "trackspence": {
         "title": "Trackspence",
@@ -113,8 +113,8 @@ Password: \`boci\`
         `,
         "demoUrl": "https://trackspence.netlify.app/",
         "githubUrl": "https://github.com/FabianHeng/Trackspence",
-        "video": "trackspence.mov",
-        "image": "trackspence.png"
+        "video": "trackspence.mp4",
+        "image": "trackspence.webp"
     },
     "singtel": {
         "title": "Sectorial Dashboard",
@@ -151,8 +151,8 @@ This is a cybersecurity dashboard designed for Singtel, a leading telecommunicat
 
 > Closed sourced, not available for public access.
         `,
-        "video": "singtel.mov",
-        "image": "singtel.png"
+        "video": "singtel.mp4",
+        "image": "singtel.webp"
     },
     "dtap": {
         "title": "Digital Twinning & Automated Pentesting",
@@ -182,8 +182,8 @@ This is a cybersecurity dashboard designed for Singtel, a leading telecommunicat
 > Project is closed sourced, but trailer video is available on YouTube.
         `,
         "demoUrl": "https://www.youtube.com/watch?v=TeYs2m9WB4E/",
-        "video": "dtap.mov",
-        "image": "dtap.png"
+        "video": "dtap.mp4",
+        "image": "dtap.webp"
     },
     "ultraflow": {
         "title": "Ultraflow Engineering Portfolio Website",
@@ -206,8 +206,8 @@ This is a cybersecurity dashboard designed for Singtel, a leading telecommunicat
 - **💻 Responsive Design**: The website is fully responsive, ensuring a seamless experience on all devices.
         `,
         "demoUrl": "https://ultraflow.netlify.app/",
-        "video": "ultraflow.mov",
-        "image": "ultraflow.png"
+        "video": "ultraflow.mp4",
+        "image": "ultraflow.webp"
     },
     "iot": {
         "title": "FishMon",
@@ -247,8 +247,8 @@ This is a cybersecurity dashboard designed for Singtel, a leading telecommunicat
         `,
         "demoUrl": "https://www.youtube.com/watch?v=D9ga04qTOAE",
         "githubUrl": "https://github.com/FabianHeng/FishMon/",
-        "video": "iot.mov",
-        "image": "iot.png"
+        "video": "iot.mp4",
+        "image": "iot.webp"
     },
     "sparklz": {
         "title": "Sparklz",
@@ -278,7 +278,7 @@ This is a cybersecurity dashboard designed for Singtel, a leading telecommunicat
 - Frontend: HTML, CSS, JavaScript
         `,
         "demoUrl": "https://sparklz.neocities.org/",
-        "video": "sparklz.mov",
-        "image": "sparklz.png"
+        "video": "sparklz.mp4",
+        "image": "sparklz.webp"
     },
 };

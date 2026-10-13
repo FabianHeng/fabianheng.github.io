@@ -6,11 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- CSS Pages Goes Here -->
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/motion.css">
+        <script type="speculationrules">
+            {
+                "prerender": [{
+                    "where": {
+                        "and": [
+                            { "href_matches": "/*" },
+                            { "not": { "href_matches": ["/*.pdf", "/*.md"] } },
+                            { "not": { "selector_matches": "[target=_blank], [aria-current=page]" } }
+                        ]
+                    },
+                    "eagerness": "moderate"
+                }]
+            }
+        </script>
+        <script>
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.documentElement.classList.add('motion');
+                setTimeout(function() {
+                    if (!window.Motion) document.documentElement.classList.remove('motion');
+                }, 3000);
+            }
+        </script>
 
         <!-- Favicon Goes Here -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -25,7 +47,7 @@
             <div class="nav-bar">
                 <div class="nav-left">
                     <div class="logo-container">
-                        <img src="img/fab.png" loading="lazy" alt="" class="logo-img">
+                        <img src="img/fab.webp" loading="lazy" alt="" class="logo-img">
                         <div class="logo-text">
                             <div class="logo-top-text big-font">Fabian Heng</div>
                             <div class="logo-bottom-text small-font">王禹璁</div>
@@ -77,7 +99,8 @@
 
         <!-- Splash Section -->
         <div class="splash">
-            <div class="splash-body">
+            <div class="splash-body" data-reveal>
+                <div class="splash-shine"></div>
                 <div class="mac-window">
                     <div class="mac-dots">
                         <span class="dot red"></span>
@@ -87,8 +110,8 @@
                 </div>
                 <div class="splash-content">
                     <div class="splash-top-text big-font">Hi. I'm Fabian.</div>
-                    <div class="splash-top-text big-font">A 
-                        <span class="txt-type" data-wait="2000" data-words='["Student.", "Designer.", "Programmer.", "Creator.", "Developer.", "Gamer."]'></span>
+                    <div class="splash-top-text big-font"><span class="txt-article">A</span>
+                        <span class="txt-type" data-wait="2000" data-words='["Engineer.", "Designer.", "Programmer.", "Creator.", "Developer.", "Gamer."]'></span>
                     </div>
                     <div class="splash-bottom-text small-font">I'm someone who has a passion for cultivating unique, creative experiences through software development and web design.</div>
                     <div class="splash-down-arrow"><i class="fa fa-arrow-down"></i></div>
@@ -100,7 +123,7 @@
 
         <!-- Projects Section -->
         <div class="projects">
-            <div class="title">
+            <div class="title" data-reveal style="--reveal-y: 24px">
                 <div class="title-dot"></div>
                 <div class="title-text big-font">Projects</div>
             </div>
@@ -121,27 +144,18 @@
                     </ul>
                 </div>
                 <div class="email">
-                    <span><i class="fa fa-envelope"></i><a href="mailto:fabian.heng@icloud.com">fabian.heng@icloud.com</a></span>
+                    <span><i class="fa fa-envelope"></i><a href="mailto:fabianheng@gmail.com">fabianheng@gmail.com</a></span>
                     <span><i class="fa fa-building"></i><a href="https://appsol.sg">founder @ Appsol</a></span>
                     <span><i class="fa fa-file-text"></i><a href="cv.html">curriculum vitae</a></span>
                 </div>
             </div>
-            <img src="img/fab.png">
+            <img src="img/fab.webp">
             <div class="copyright">
                 <p>Made by Fabian Heng &copy; 2026</p>
                 <p>Miss my old webpage? You can still access it by clicking <a href="https://fabianheng.github.io/prev/prev.html">here</a>.</p>
             </div>
         </footer>
 
-        <!-- Bootstrap JS, Popper.js, and jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/typewriter.js"></script>
         <script type="text/javascript" src="js/scroll.js"></script>
 
@@ -159,12 +173,8 @@
                     const projectElement = document.createElement('div');
                     projectElement.className = 'projects-body';
                     projectElement.id = projectKey;
-                    projectElement.setAttribute('data-aos', 'fade-up');
-                    projectElement.setAttribute('data-aos-offset', '150');
-                    projectElement.setAttribute('data-aos-delay', '50');
-                    projectElement.setAttribute('data-aos-duration', '500');
-                    projectElement.setAttribute('data-aos-easing', 'ease-out');
-                    projectElement.setAttribute('data-aos-once', 'true');
+                    projectElement.setAttribute('data-reveal', '');
+                    projectElement.style.setProperty('--reveal-y', '80px');
                     
                     projectElement.innerHTML = `
                         <a class="projects-content" href="project.html?name=${projectKey}">
@@ -181,16 +191,15 @@
                                 <div class="projects-arrow"><i class="fa fa-long-arrow-right"></i></div>
                             </div>
                             <div class="projects-img">
-                                <img src="img/work/${project.image}" alt="${project.title}" class="img">
+                                <img src="img/work/${project.image}" alt="${project.title}" class="img" loading="lazy" decoding="async">
                             </div>
                         </a>
                     `;
                     
                     projectsContainer.appendChild(projectElement);
                 });
-
-                AOS.refresh();
             });
         </script>
+        <script src="js/motion.js"></script>
     </body>
 </html>

@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
             headings.forEach(h2 => observer.observe(h2));
         }
 
+        if (window.Motion) Motion.revealChildren(body, '32px');
+
         // Honour a deep link once content exists
         if (window.location.hash) {
             const target = document.getElementById(window.location.hash.slice(1));

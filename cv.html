@@ -87,6 +87,29 @@
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/cv.css">
+        <link rel="stylesheet" type="text/css" href="css/motion.css">
+        <script type="speculationrules">
+            {
+                "prerender": [{
+                    "where": {
+                        "and": [
+                            { "href_matches": "/*" },
+                            { "not": { "href_matches": ["/*.pdf", "/*.md"] } },
+                            { "not": { "selector_matches": "[target=_blank], [aria-current=page]" } }
+                        ]
+                    },
+                    "eagerness": "moderate"
+                }]
+            }
+        </script>
+        <script>
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.documentElement.classList.add('motion');
+                setTimeout(function() {
+                    if (!window.Motion) document.documentElement.classList.remove('motion');
+                }, 3000);
+            }
+        </script>
         <noscript><style>.cv-loading { display: none; }</style></noscript>
 
         <!-- Favicon Goes Here -->
@@ -102,7 +125,7 @@
             <div class="nav-bar">
                 <div class="nav-left">
                     <div class="logo-container">
-                        <img src="img/fab.png" loading="lazy" alt="" class="logo-img">
+                        <img src="img/fab.webp" loading="lazy" alt="" class="logo-img">
                         <div class="logo-text">
                             <div class="logo-top-text big-font">Fabian Heng</div>
                             <div class="logo-bottom-text small-font">王禹璁</div>
@@ -155,22 +178,22 @@
         <!-- CV Section -->
         <main class="cv">
             <header class="cv-hero">
-                <div class="title">
+                <div class="title" data-reveal style="--reveal-y: 24px">
                     <div class="title-dot"></div>
                     <div class="title-text big-font">Curriculum Vitae</div>
                 </div>
-                <h1 class="big-font">Fabian Heng</h1>
-                <p class="cv-hero-sub small-font">Software Engineer (Full-Stack and DevOps). NUS Computer Science, Singapore.</p>
-                <div class="cv-actions">
+                <h1 class="big-font" data-reveal style="--reveal-y: 32px">Fabian Heng</h1>
+                <p class="cv-hero-sub small-font" data-reveal style="--reveal-y: 32px">Software Engineer (Full-Stack and DevOps). NUS Computer Science, Singapore.</p>
+                <div class="cv-actions" data-reveal style="--reveal-y: 32px">
                     <div class="button-blue"><a href="files/Fabian_Resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>Resume (1 page)</a></div>
                     <div class="button-blue"><a href="files/Fabian_CV.pdf" target="_blank"><i class="fa fa-file-text-o"></i>Full CV PDF</a></div>
                     <div class="button-dark-blue"><a href="cv.md" target="_blank"><i class="fa fa-code"></i>Markdown source</a></div>
                 </div>
             </header>
 
-            <nav class="cv-toc" id="cv-toc" aria-label="CV sections"></nav>
+            <nav class="cv-toc" id="cv-toc" aria-label="CV sections" data-reveal style="--reveal-y: 32px"></nav>
 
-            <article class="cv-window">
+            <article class="cv-window" data-reveal>
                 <div class="mac-window">
                     <div class="mac-dots">
                         <span class="dot red"></span>
@@ -200,12 +223,12 @@
                     </ul>
                 </div>
                 <div class="email">
-                    <span><i class="fa fa-envelope"></i><a href="mailto:fabian.heng@icloud.com">fabian.heng@icloud.com</a></span>
+                    <span><i class="fa fa-envelope"></i><a href="mailto:fabianheng@gmail.com">fabianheng@gmail.com</a></span>
                     <span><i class="fa fa-building"></i><a href="https://appsol.sg">founder @ Appsol</a></span>
                     <span><i class="fa fa-file-text"></i><a href="cv.html">curriculum vitae</a></span>
                 </div>
             </div>
-            <img src="img/fab.png">
+            <img src="img/fab.webp">
             <div class="copyright">
                 <p>Made by Fabian Heng &copy; 2026</p>
                 <p>Miss my old webpage? You can still access it by clicking <a href="https://fabianheng.github.io/prev/prev.html">here</a>.</p>
@@ -215,5 +238,6 @@
         <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
         <script type="text/javascript" src="js/scroll.js"></script>
         <script src="js/cv.js"></script>
+        <script src="js/motion.js"></script>
     </body>
 </html>

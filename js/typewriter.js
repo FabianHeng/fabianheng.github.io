@@ -1,5 +1,6 @@
 const TypeWriter = function(txtElement, words, wait = 2000) {
     this.txtElement = txtElement;
+    this.articleElement = document.querySelector('.txt-article');
     this.words = words;
     this.txt = '';
     this.wordIndex = 0;
@@ -14,6 +15,11 @@ TypeWriter.prototype.type = function() {
     const current = this.wordIndex % this.words.length;
     // Get full text of current word
     const fullTxt = this.words[current];
+
+    // Match the article to the word about to be typed
+    if(!this.isDeleting && this.txt === '' && this.articleElement) {
+        this.articleElement.textContent = /^[aeiou]/i.test(fullTxt) ? 'An' : 'A';
+    }
 
     // Check if deleting
     if(this.isDeleting) {

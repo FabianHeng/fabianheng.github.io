@@ -6,12 +6,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- CSS Pages Goes Here -->
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/motion.css">
+        <script type="speculationrules">
+            {
+                "prerender": [{
+                    "where": {
+                        "and": [
+                            { "href_matches": "/*" },
+                            { "not": { "href_matches": ["/*.pdf", "/*.md"] } },
+                            { "not": { "selector_matches": "[target=_blank], [aria-current=page]" } }
+                        ]
+                    },
+                    "eagerness": "moderate"
+                }]
+            }
+        </script>
+        <script>
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.documentElement.classList.add('motion');
+                setTimeout(function() {
+                    if (!window.Motion) document.documentElement.classList.remove('motion');
+                }, 3000);
+            }
+        </script>
 
         <!-- Favicon Goes Here -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -26,7 +48,7 @@
             <div class="nav-bar">
                 <div class="nav-left">
                     <div class="logo-container">
-                        <img src="img/fab.png" loading="lazy" alt="" class="logo-img">
+                        <img src="img/fab.webp" loading="lazy" alt="" class="logo-img">
                         <div class="logo-text">
                             <div class="logo-top-text big-font">Fabian Heng</div>
                             <div class="logo-bottom-text small-font">王禹璁</div>
@@ -79,15 +101,14 @@
         <!-- About Me Section -->
         <div class="about">
             <div class="about-content">
-                <div class="about-img"><img src="img/life/about.jpeg" alt="A picture of me in the snow."></div>
-                <div class="about-img-mobile"><img src="img/life/about-mobile.jpeg" alt="A picture of me in the snow."></div>
-                <div class="about-text">
+                <div class="about-img" data-reveal><img src="img/life/about.webp" alt="A picture of me in the snow."></div>
+                <div class="about-img-mobile" data-reveal><img src="img/life/about-mobile.webp" alt="A picture of me in the snow."></div>
+                <div class="about-text" data-reveal style="--reveal-y: 80px">
                     <div class="about-top-text big-font">More about me.</div>
-                    <div class="about-bottom-text small-font">A 23-year old Singapore-based software developer. I first
+                    <div class="about-bottom-text small-font">A 25-year old Singapore-based software developer. I first
                         started my computing journey through cybersecurity and have since expanded my skills
-                        to include web development, game development, and machine learning. I am currently a
-                        penultimate year student at National University of Singapore, pursuing a degree in Computer
-                        Science.
+                        to include web development, game development, and machine learning. I graduated from the
+                        National University of Singapore with a degree in Computer Science.
                     </div>
                     <div class="button-blue"><a href="cv.html">View my Curriculum Vitae.</a></div>
                 </div>
@@ -96,37 +117,25 @@
 
         <!-- Education Section -->
         <div class="education small-font ">
-            <div class="title">
+            <div class="title" data-reveal style="--reveal-y: 24px">
                 <div class="title-dot"></div>
                 <div class="title-text big-font">Education</div>
             </div>
 
             <div class="education-wrapper">
-                <section class="education-card"
-                    data-aos="fade-up"
-                    data-aos-offset="150"
-                    data-aos-delay="50"
-                    data-aos-duration="500"
-                    data-aos-easing="ease-out"
-                    data-aos-once="true">
+                <section class="education-card" data-reveal>
                     <a href="https://www.comp.nus.edu.sg/programmes/ug/cs/" target="_blank">
-                        <img src="img/education/nuscs.png" alt="Logo of NUS School of Computing">
+                        <img src="img/education/nuscs.webp" alt="Logo of NUS School of Computing">
                         <div class="splash-txt">
                             <h3 class="big-font">Bachelor of Computing in Computer Science</h3>
                             <h6 class="small-font">National University of Singapore</h6>
-                            <h6 class="small-font">August 2023 - Present</h6>
+                            <h6 class="small-font">August 2023 - June 2026</h6>
                         </div>
                     </a>
                 </section>
-                <section class="education-card"
-                    data-aos="fade-up"
-                    data-aos-offset="150"
-                    data-aos-delay="50"
-                    data-aos-duration="500"
-                    data-aos-easing="ease-out"
-                    data-aos-once="true">
+                <section class="education-card" data-reveal>
                     <a href="https://www.sp.edu.sg" target="_blank">
-                        <img src="img/education/spsoc.png" alt="Logo of SP School of Computing">
+                        <img src="img/education/spsoc.webp" alt="Logo of SP School of Computing">
                         <div class="splash-txt">
                             <h3 class="big-font">Diploma in Infocomm Security Management</h3>
                             <h6 class="small-font">Singapore Polytechnic</h6>
@@ -134,30 +143,18 @@
                         </div>
                     </a>
                 </section>
-                <section class="education-card"
-                    data-aos="fade-up"
-                    data-aos-offset="150"
-                    data-aos-delay="50"
-                    data-aos-duration="500"
-                    data-aos-easing="ease-out"
-                    data-aos-once="true">
+                <section class="education-card" data-reveal>
                     <a href="https://www.sst.edu.sg" target="_blank">
-                        <img src="img/education/sst.png" alt="Logo of SST">
+                        <img src="img/education/sst.webp" alt="Logo of SST">
                         <div class="splash-txt">
                             <h3 class="big-font">School of Science & Technology</h3>
                             <h6 class="small-font">January 2014 - January 2017</h6>
                         </div>
                     </a>
                 </section>
-                <section class="education-card"
-                    data-aos="fade-up"
-                    data-aos-offset="150"
-                    data-aos-delay="50"
-                    data-aos-duration="500"
-                    data-aos-easing="ease-out"
-                    data-aos-once="true">
+                <section class="education-card" data-reveal>
                     <a href="https://shuqunpri.moe.edu.sg" target="_blank">
-                        <img src="img/education/shuqun.jpg" alt="Logo of Shuqun">
+                        <img src="img/education/shuqun.webp" alt="Logo of Shuqun">
                         <div class="splash-txt">
                             <h3 class="big-font">Shuqun Primary School</h3>
                             <h6 class="small-font">January 2008 - January 2013</h6>
@@ -169,17 +166,12 @@
 
         <!-- SEP Section -->
         <div class="sep small-font" id="sep">
-            <div class="title">
+            <div class="title" data-reveal style="--reveal-y: 24px">
                 <div class="title-dot"></div>
                 <div class="title-text big-font">Travels</div>
             </div>
 
-            <div data-aos="fade-up"
-                data-aos-offset="150"
-                data-aos-delay="50"
-                data-aos-duration="500"
-                data-aos-easing="ease-out"
-                data-aos-once="true" class="sep-card">
+            <div data-reveal class="sep-card">
                 <div class="sep-title">
                     <div class="sep-title-text">
                         <div class="sep-role big-font">Student Exchange Program</div>
@@ -187,7 +179,7 @@
                         <div class="sep-date">Aug 25 - Dec 25</div>
                     </div>
                     <div class="sep-org-img">
-                        <img src="img/events/ut.png" alt="University of Texas at Austin Logo">
+                        <img src="img/events/ut.webp" alt="University of Texas at Austin Logo">
                     </div>
                 </div>
                 <p class="sep-subtitle">
@@ -199,32 +191,26 @@
 
         <!-- Involvement Section -->
         <div class="involvement small-font">
-            <div class="title">
+            <div class="title" data-reveal style="--reveal-y: 24px">
                 <div class="title-dot"></div>
                 <div class="title-text big-font">Involvement & Achievements</div>
             </div>
 
             <div class="involvement-content">
-                <div class="involvement-card"
-                    data-aos="fade-up"
-                    data-aos-offset="150"
-                    data-aos-delay="50"
-                    data-aos-duration="500"
-                    data-aos-easing="ease-out"
-                    data-aos-once="true">
-                    <div class="involvement-title">
+                <div class="involvement-card">
+                    <div class="involvement-title" data-reveal style="--reveal-y: 32px">
                         <div class="involvement-title-text">
                             <div class="involvement-role big-font">President</div>
                             <div class="involvement-org small-font">National University of Singapore, Korean Cultural Interest Group</div>
                             <div class="involvement-date">May 24 - May 25</div>
                         </div>
                         <div class="involvement-org-img">
-                            <img src="img/events/kcig.jpg" alt="KCIG Logo">
+                            <img src="img/events/kcig.webp" alt="KCIG Logo">
                         </div>
                     </div>
                     <div class="involvement-story">
-                        <section class="involvement-story-section">
-                            <img src="img/events/kcig-1.jpg" alt="Orientation Day">
+                        <section class="involvement-story-section" data-reveal>
+                            <img src="img/events/kcig-1.webp" alt="Orientation Day">
                             <div class="involvement-section-text">
                                 <div class="involvement-section-top-text big-font">Tough but fulfilling experience.</div>
                                 <div class="involvement-section-bottom-text small-font">As the president of 
@@ -235,7 +221,7 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="involvement-story-section">
+                        <section class="involvement-story-section" data-reveal>
                             <div class="involvement-section-text">
                                 <div class="involvement-section-top-text big-font">A learning journey.</div>
                                 <div class="involvement-section-bottom-text small-font">This role has given me the
@@ -251,31 +237,25 @@
                                     develop strong public speaking skills and the confidence to articulate ideas clearly.
                                 </div>
                             </div>
-                            <img src="img/events/kcig-2.jpg" alt="Student Life Fair">
+                            <img src="img/events/kcig-2.webp" alt="Student Life Fair">
                         </section>
                     </div>
                 </div>
 
-                <div class="involvement-card"
-                    data-aos="fade-up"
-                    data-aos-offset="150"
-                    data-aos-delay="50"
-                    data-aos-duration="500"
-                    data-aos-easing="ease-out"
-                    data-aos-once="true">
-                    <div class="involvement-title">
+                <div class="involvement-card">
+                    <div class="involvement-title" data-reveal style="--reveal-y: 32px">
                         <div class="involvement-title-text">
                             <div class="involvement-role big-font">Volunteer Management Committee</div>
                             <div class="involvement-org small-font">National University of Singapore, Project Action Speaks Louder</div>
                             <div class="involvement-date">Jan 23 - Jul 23</div>
                         </div>
                         <div class="involvement-org-img">
-                            <img src="img/events/asl.jpg" alt="ASL Logo">
+                            <img src="img/events/asl.webp" alt="ASL Logo">
                         </div>
                     </div>
                     <div class="involvement-story">
-                        <section class="involvement-story-section">
-                            <img src="img/events/asl-1.jpg" alt="ASL Commemoration Day">
+                        <section class="involvement-story-section" data-reveal>
+                            <img src="img/events/asl-1.webp" alt="ASL Commemoration Day">
                             <div class="involvement-section-text">
                                 <div class="involvement-section-top-text big-font">The act of giving.</div>
                                 <div class="involvement-section-bottom-text small-font">As the Volunteer Management
@@ -287,7 +267,7 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="involvement-story-section">
+                        <section class="involvement-story-section" data-reveal>
                             <div class="involvement-section-text">
                                 <div class="involvement-section-top-text big-font">Heart to heart.</div>
                                 <div class="involvement-section-bottom-text small-font">This role has given me the
@@ -302,31 +282,25 @@
                                     to making a positive impact in society.
                                 </div>
                             </div>
-                            <img src="img/events/asl-2.jpg" alt="Volunteer Induction Programme">
+                            <img src="img/events/asl-2.webp" alt="Volunteer Induction Programme">
                         </section>
                     </div>
                 </div>
 
-                <div class="involvement-card"
-                    data-aos="fade-up"
-                    data-aos-offset="150"
-                    data-aos-delay="50"
-                    data-aos-duration="500"
-                    data-aos-easing="ease-out"
-                    data-aos-once="true">
-                    <div class="involvement-title">
+                <div class="involvement-card">
+                    <div class="involvement-title" data-reveal style="--reveal-y: 32px">
                         <div class="involvement-title-text">
                             <div class="involvement-role big-font">Programmes Committee</div>
                             <div class="involvement-org small-font">Singapore Polytechnic, Sign Language Club</div>
                             <div class="involvement-date">Apr 19 - Mar 21</div>
                         </div>
                         <div class="involvement-org-img">
-                            <img src="img/events/slc.png" alt="SLC Logo">
+                            <img src="img/events/slc.webp" alt="SLC Logo">
                         </div>
                     </div>
                     <div class="involvement-story">
-                        <section class="involvement-story-section">
-                            <img src="img/events/slc-1.jpg" alt="SIGNature Concert">
+                        <section class="involvement-story-section" data-reveal>
+                            <img src="img/events/slc-1.webp" alt="SIGNature Concert">
                             <div class="involvement-section-text">
                                 <div class="involvement-section-top-text big-font">The big stage.</div>
                                 <div class="involvement-section-bottom-text small-font">As a programmes committee
@@ -337,7 +311,7 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="involvement-story-section">
+                        <section class="involvement-story-section" data-reveal>
                             <div class="involvement-section-text">
                                 <div class="involvement-section-top-text big-font">Bridging the gaps.</div>
                                 <div class="involvement-section-bottom-text small-font">Through this role, I was introduced
@@ -353,7 +327,7 @@
                                     growth and equipped me with valuable skills for future endeavors.
                                 </div>
                             </div>
-                            <img src="img/events/slc-2.jpg" alt="Deaf Day Pamphlet">
+                            <img src="img/events/slc-2.webp" alt="Deaf Day Pamphlet">
                         </section>
                     </div>
                 </div>
@@ -373,28 +347,18 @@
                     </ul>
                 </div>
                 <div class="email">
-                    <span><i class="fa fa-envelope"></i><a href="mailto:fabian.heng@icloud.com">fabian.heng@icloud.com</a></span>
+                    <span><i class="fa fa-envelope"></i><a href="mailto:fabianheng@gmail.com">fabianheng@gmail.com</a></span>
                     <span><i class="fa fa-building"></i><a href="https://appsol.sg">founder @ Appsol</a></span>
                     <span><i class="fa fa-file-text"></i><a href="cv.html">curriculum vitae</a></span>
                 </div>
             </div>
-            <img src="img/fab.png">
+            <img src="img/fab.webp">
             <div class="copyright">
                 <p>Made by Fabian Heng &copy; 2026</p>
                 <p>Miss my old webpage? You can still access it by clicking <a href="https://fabianheng.github.io/prev/prev.html">here</a>.</p>
             </div>
         </footer>
 
-        <!-- Bootstrap JS, Popper.js, and jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/typewriter.js"></script>
         <script type="text/javascript" src="js/scroll.js"></script>
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -409,7 +373,7 @@
                     scrollWheelZoom: false
                 }).setView(centerCoords, zoomLevel);
                 
-                L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_4iph_1_d7e1d037dab01acc02879510', {
                     attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
                     maxZoom: 19
                 }).addTo(map);
@@ -446,7 +410,7 @@
                             });
 
                             marker.on('click', function() {
-                                window.location.href = `sep.html?id=${trip.id}`;
+                                Motion.navigate(`sep.html?id=${trip.id}`);
                             });
 
                         } else {
@@ -470,5 +434,6 @@
                 }
             }
         </script>
+        <script src="js/motion.js"></script>
     </body>
 </html>
