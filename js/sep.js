@@ -70,7 +70,11 @@ const travelData = [
             {
                 title: "Next stop: Bozeman, Montana",
                 text: "Traveling to Bozeman was our first plane trip with the big group of friends! We took a short transit flight from Austin to Bozeman (with a nasty 10-minute window in Chicago due to delays), and the views from the plane were absolutely breathtaking. As we descended, we were greeted by stunning mountain landscapes and vast open spaces. It was a refreshing change from the cityscape of Austin. We even hit up Applebee's for dinner because, why not?",
-                img: "img/sep/yellowstone/yellowstone1.webp"
+                img: "img/sep/yellowstone/yellowstone1.webp",
+                note: {
+                    label: "On the road",
+                    text: "Somewhere in Montana, in the pitch dark, the rental car suddenly refused to connect to my phone. No music, no GPS on the car screen, nothing. We even pulled over to the side of the road and switched the car off and on again, to no avail. So we drove the rest of the way in complete silence, staring at the road and hoping we didn't miss a turn."
+                }
             },
             {
                 title: "Mammoth Hot Springs",
@@ -110,7 +114,11 @@ const travelData = [
             {
                 title: "Wildlife Spotting",
                 text: "You can't visit Grand Teton without keeping an eye out for the local residents. As we drove along the scenic loop, we kept our eyes peeled for wildlife. While we kept a very safe and respectful distance, scanning the tree lines and open plains for squirrels, elk, bears, and even a wolf added a thrilling edge to our wilderness escape.",
-                img: "img/sep/teton/teton3.webp"
+                img: "img/sep/teton/teton3.webp",
+                note: {
+                    label: "Close call",
+                    text: "While I was driving, we spotted a wolf right by the road. Naturally, I slowed down to get a better look. What I forgot was that my friends were driving right behind us, and we very nearly caused a chain collision. Worth it (probably)."
+                }
             }
         ]
     },
@@ -230,7 +238,11 @@ const travelData = [
             {
                 title: "First NBA Game (Despite Being Sick!)",
                 text: "I came down with a terrible sore throat while in San Antonio, but there was no way I was going to let that stop me. I dragged myself to the arena to watch my very first live NBA game. It was completely worth it to watch the San Antonio Spurs absolutely destroy the Houston Rockets! The arena atmosphere was phenomenal.",
-                img: "img/sep/sa/sa1.webp"
+                img: "img/sep/sa/sa1.webp",
+                note: {
+                    label: "Lesser of two evils",
+                    text: "The sore throat was so bad that every single swallow was SO painful. Of course, dinner that night was a choice between fried chicken wings or burgers. I went with the burger as the better of the two evils, and it was still hell trying to get every bite down."
+                }
             },
             {
                 title: "Remember The Alamo",
@@ -355,3 +367,13 @@ const travelData = [
         ]
     }
 ];
+
+// Chronological order, so stop numbers match everywhere
+(function() {
+    const MONTHS = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+    const toTime = date => {
+        const [day, month, year] = date.split(' ');
+        return new Date(+year, MONTHS[month.slice(0, 3)], +day).getTime();
+    };
+    travelData.sort((a, b) => toTime(a.date) - toTime(b.date));
+})();

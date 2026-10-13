@@ -187,25 +187,52 @@ This is a cybersecurity dashboard designed for Singtel, a leading telecommunicat
     },
     "ultraflow": {
         "title": "Ultraflow Engineering Portfolio Website",
-        "description": "A complete redesign of an engineering firm's website, highlighting its achievements and successful projects.",
+        "description": "A content-managed website for a Singapore precision engineering firm, built with Next.js and a Sanity CMS so the team can update their works, services and clients without touching code.",
         "tech": [
-            { "type": "lang", "name": "html", "icon": "html.svg" },
-            { "type": "lang", "name": "css", "icon": "css.svg" },
-            { "type": "lang", "name": "js", "icon": "js.svg" },
-            { "type": "prog", "name": "netlify", "icon": "netlify.svg" }
+            { "type": "lang", "name": "react", "icon": "react.svg" },
+            { "type": "lang", "name": "ts", "icon": "ts.svg" },
+            { "type": "prog", "name": "nextjs", "icon": "nextjs.svg" },
+            { "type": "prog", "name": "sanity", "icon": "sanity.svg" },
+            { "type": "prog", "name": "tailwind", "icon": "tailwind.svg" },
+            { "type": "prog", "name": "vercel", "icon": "vercel.svg" }
         ],
         "content": `
 ### Overview
 
-**Ultraflow** is a portfolio website designed for an engineering firm, showcasing their projects and skills in a visually appealing manner. The website is built with a focus on user experience and responsiveness, ensuring that it looks great on all devices.
+**Ultraflow Engineering** is a Singapore engineering firm specialising in fabrication, CNC machining and repair for the marine & offshore, oil & gas and wind energy sectors. Their website showcases over 2,000 completed projects, their services, clients and certifications, and is fully managed through a **Sanity CMS**, so the team can publish new works and update details on their own without a developer.
 
 ---
 
-### Features
-- **Project Showcase**: Highlights projects with detailed descriptions and images.
-- **Responsive Design**: The website is fully responsive, ensuring a seamless experience on all devices.
+### Key Features
+
+- **Works Gallery**: A showcase of completed projects with a full-screen lightbox, so prospective clients can browse past fabrication and machining work up close.
+- **Services & Capabilities**: Each service carries its own image gallery, giving every capability a dedicated space to show real output.
+- **Clients & Certifications**: Client logos and certifications such as ISO 9001, ISO 45001 and bizSAFE Star build trust at a glance.
+- **FAQ Section**: Answers common questions on capabilities, tolerances, materials and lead times before a customer even picks up the phone.
+- **Search-Ready**: Generated sitemap, canonical URLs, and LocalBusiness and FAQPage structured data help the firm show up in local search results.
+- **Fast by Default**: Images are served through Sanity's image CDN at the right size, and the feature video only loads once it scrolls into view.
+
+---
+
+### Content Management
+
+- **Built for Non-Technical Editors**: The Studio uses plain-language labels and icons, with the two most common tasks (editing the home page and contact details) one click away.
+- **Drag to Reorder**: Services, clients and certifications are drag-and-drop lists, so the order in the Studio is exactly the order on the site.
+- **Publish to Deploy**: Publishing in the Studio fires a webhook that rebuilds and redeploys the site automatically, keeping the live site in sync with the content.
+- **Type-Safe Content**: TypeScript types are generated straight from the CMS schema, so a breaking content change fails the build instead of breaking the live site.
+
+> **Behind the build**: The site is a fully static export with no server to maintain, so hosting stays free while the team still gets a proper CMS.
+
+---
+
+### Tech Stack & Architecture
+
+- **Frontend**: Next.js (App Router), React, TypeScript, Tailwind CSS
+- **Content**: Sanity Studio, GROQ queries, Sanity image CDN
+- **Architecture**: Static export rebuilt on every publish via a Sanity webhook and Vercel deploy hook, with no serverless runtime to run or pay for.
+- **Hosting & Monitoring**: Vercel, Vercel Analytics, Speed Insights
         `,
-        "demoUrl": "https://ultraflow.netlify.app/",
+        "demoUrl": "https://ultraflow.com.sg/",
         "video": "ultraflow.mp4",
         "image": "ultraflow.webp"
     },

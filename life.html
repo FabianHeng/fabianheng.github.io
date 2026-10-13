@@ -379,9 +379,17 @@
                 }).addTo(map);
 
                 if (typeof travelData !== 'undefined') {
-                    travelData.forEach(function(trip) {
-                        var marker = L.marker(trip.coords, { 
-                            riseOnHover: true
+                    travelData.forEach(function(trip, i) {
+                        var stop = String(i + 1).padStart(2, '0');
+                        var marker = L.marker(trip.coords, {
+                            riseOnHover: true,
+                            icon: L.divIcon({
+                                className: 'sep-pin',
+                                html: '<span>' + (i + 1) + '</span>',
+                                iconSize: [28, 28],
+                                iconAnchor: [14, 14],
+                                popupAnchor: [0, -14]
+                            })
                         }).addTo(map);
 
                         var popupContent;
@@ -389,6 +397,7 @@
                         if (isDesktop) {
                             popupContent = `
                                 <div style="text-align:center; pointer-events: none;">
+                                    <span class="sep-pin-stop">Stop ${stop}</span>
                                     <span style="font-weight: bold; font-size: 14px; display: block; margin-bottom: 4px;">
                                         ${trip.locationName}
                                     </span>
@@ -416,6 +425,7 @@
                         } else {
                             popupContent = `
                                 <div style="text-align:center;">
+                                    <span class="sep-pin-stop">Stop ${stop}</span>
                                     <span style="font-weight: bold; font-size: 14px; display: block; margin-bottom: 4px;">
                                         ${trip.locationName}
                                     </span>
