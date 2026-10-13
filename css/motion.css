@@ -36,8 +36,25 @@ html.motion.is-leaving-up .nav {
     }
 }
 
-.nav {
-    view-transition-name: nav;
+/* Named per piece, a named wrapper would block the pill's backdrop blur */
+.logo-container {
+    view-transition-name: nav-logo;
+}
+
+.nav-pill {
+    view-transition-name: nav-pill;
+}
+
+.nav-pill-glow {
+    view-transition-name: nav-glow;
+}
+
+.socials-container {
+    view-transition-name: nav-socials;
+}
+
+.hamburger svg {
+    view-transition-name: nav-hamburger;
 }
 
 /* Scroll Reveal */

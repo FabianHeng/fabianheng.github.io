@@ -8,9 +8,9 @@
         <!-- CSS Pages Goes Here -->
         <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/project.css">
         <link rel="stylesheet" type="text/css" href="css/motion.css">
         <script type="speculationrules">
             {
@@ -51,16 +51,29 @@
         <div class="project">
             <a href="index.html" id="p-nav" class="p-nav small-font" data-reveal style="--reveal-y: 24px"><i class="fa fa-long-arrow-left"></i> &nbsp; Back to Home</a>
             <div class="p-splash">
+                <div class="title" data-reveal style="--reveal-y: 24px">
+                    <div class="title-dot"></div>
+                    <div class="title-text big-font">Project</div>
+                </div>
                 <h1 id="p-title" class="big-font" data-reveal style="--reveal-y: 32px"></h1>
                 <p id="p-description" class="small-font" data-reveal style="--reveal-y: 32px"></p>
-                <video data-reveal src="" playsinline autoplay loop muted poster=""></video>
+                <div class="p-media" data-reveal>
+                    <div class="mac-window">
+                        <div class="mac-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                    </div>
+                    <video src="" playsinline autoplay loop muted poster=""></video>
+                </div>
                 <div class="tech-stack p-tech-stack" data-reveal style="--reveal-y: 32px"></div>
                 <div class="p-buttons" data-reveal style="--reveal-y: 32px">
-                    <div class="button-blue"><a><i class="fa fa-eye p-icon"></i></a></div>
-                    <div class="button-dark-blue"><a><i class="fa fa-github p-icon"></i></a></div>
+                    <div class="button-blue"><a><i class="fa fa-eye p-icon"></i>Live demo</a></div>
+                    <div class="button-dark-blue"><a><i class="fa fa-github p-icon"></i>Source code</a></div>
                 </div>
             </div>
-            <div id="p-content" class="p-content markdown-body small-font">
+            <div id="p-content" class="p-content small-font">
             </div>
         </div>
 
@@ -89,7 +102,7 @@
             </div>
         </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
         <script type="text/javascript" src="js/scroll.js"></script>
         <script src="js/projects.js"></script>
         <script>
@@ -98,7 +111,108 @@
                 return urlParams.get(param);
             }
 
+            function el(tag, className, html) {
+                const node = document.createElement(tag);
+                if (className) node.className = className;
+                if (html !== undefined) node.innerHTML = html;
+                return node;
+            }
+
+            // "- **Title**: text" lists become cards
+            function renderFeatures(list) {
+                const grid = el('div', 'p-features');
+                list.items.forEach(item => {
+                    const [, title, text] = item.text.match(/^\*\*(.+?)\*\*:\s*([\s\S]*)$/);
+                    const card = el('div', 'p-feature');
+                    card.setAttribute('data-reveal', '');
+                    card.style.setProperty('--reveal-y', '32px');
+                    card.appendChild(el('h3', 'p-feature-title', marked.parseInline(title)));
+                    card.appendChild(el('p', 'p-feature-text', marked.parseInline(text)));
+                    grid.appendChild(card);
+                });
+                return grid;
+            }
+
+            // "- Label: a, b, c" lists become spec rows
+            function renderSpecs(list) {
+                const table = el('div', 'p-specs');
+                table.setAttribute('data-reveal', '');
+                table.style.setProperty('--reveal-y', '32px');
+                list.items.forEach(item => {
+                    const match = item.text.replace(/\*\*/g, '').match(/^([^:]+):\s*([\s\S]+)$/);
+                    const row = el('div', 'p-spec');
+                    if (!match) {
+                        row.appendChild(el('div', 'p-spec-value', marked.parseInline(item.text)));
+                        table.appendChild(row);
+                        return;
+                    }
+                    const [, label, value] = match;
+                    const parts = value.split(/,\s*(?![^()]*\))/);
+                    const chips = parts.every(part => part.split(/\s+/).length <= 4 && !/\.$/.test(part));
+                    row.appendChild(el('div', 'p-spec-label', label));
+                    row.appendChild(chips
+                        ? el('div', 'p-spec-value p-chips', parts.map(part => `<span class="p-chip">${marked.parseInline(part)}</span>`).join(''))
+                        : el('div', 'p-spec-value', marked.parseInline(value)));
+                    table.appendChild(row);
+                });
+                return table;
+            }
+
+            // Split markdown into one section per heading
+            function renderContent(markdown, container) {
+                const sections = [];
+                let current = null;
+
+                marked.lexer(markdown).forEach(token => {
+                    if (token.type === 'heading') {
+                        current = { title: token.text, tokens: [] };
+                        sections.push(current);
+                    } else if (token.type !== 'hr' && token.type !== 'space') {
+                        if (!current) {
+                            current = { title: '', tokens: [] };
+                            sections.push(current);
+                        }
+                        current.tokens.push(token);
+                    }
+                });
+
+                sections.forEach(section => {
+                    const node = el('section', 'p-section');
+                    if (/disclaimer/i.test(section.title)) node.classList.add('p-note');
+                    if (section.title) node.appendChild(el('h2', 'p-section-title', section.title));
+
+                    section.tokens.forEach(token => {
+                        if (token.type === 'list' && /tech/i.test(section.title)) {
+                            node.appendChild(renderSpecs(token));
+                        } else if (token.type === 'list' && token.items.every(item => /^\*\*.+?\*\*:/.test(item.text))) {
+                            node.appendChild(renderFeatures(token));
+                        } else {
+                            const wrap = el('div', null, marked.parse(token.raw));
+                            Array.from(wrap.children).forEach(child => {
+                                child.setAttribute('data-reveal', '');
+                                child.style.setProperty('--reveal-y', '32px');
+                                node.appendChild(child);
+                            });
+                        }
+                    });
+
+                    if (/overview/i.test(section.title)) {
+                        const lead = node.querySelector('p');
+                        if (lead) lead.classList.add('p-lead');
+                    }
+
+                    node.querySelector('.p-section-title')?.setAttribute('data-reveal', '');
+                    container.appendChild(node);
+                });
+
+                container.querySelectorAll('a[href^="http"]').forEach(a => {
+                    a.target = '_blank';
+                    a.rel = 'noopener';
+                });
+            }
+
             const projectName = getQueryParam("name");
+            const content = document.getElementById("p-content");
 
             if (projectName && projects[projectName]) {
                 const project = projects[projectName];
@@ -110,7 +224,7 @@
                 // Set basic info
                 document.getElementById("p-title").innerText = project.title;
                 document.getElementById("p-description").innerText = project.description;
-                document.getElementById("p-content").innerHTML = marked.parse(project.content);
+                renderContent(project.content, content);
                 document.title = `Fabian Heng | ${project.title}`;
                 
                 // Set video/image
@@ -119,14 +233,11 @@
                     videoElement.src = `img/work/video/${project.video}`;
                     videoElement.poster = `img/work/${project.image}`;
                 } else {
-                    videoElement.style.display = 'none';
                     const imgElement = document.createElement('img');
                     imgElement.src = `img/work/${project.image}`;
                     imgElement.alt = project.title;
                     imgElement.className = 'p-splash-image';
-                    imgElement.setAttribute('data-reveal', '');
-                    videoElement.parentNode.insertBefore(imgElement, videoElement);
-                    videoElement.remove();
+                    videoElement.replaceWith(imgElement);
                 }
                 
                 // Set tech stack
@@ -155,21 +266,14 @@
                 } else {
                     buttonsContainer.querySelector('.button-dark-blue').style.display = 'none';
                 }
-
-                // Reveal content blocks
-                Array.from(document.getElementById("p-content").children).forEach(child => {
-                    child.setAttribute('data-reveal', '');
-                    child.style.setProperty('--reveal-y', '32px');
-                });
                 
             } else {
                 // If project not found, display a message
                 document.getElementById("p-title").innerText = "Project Not Found";
                 document.getElementById("p-description").innerText = "Sorry, the project you are looking for does not exist.";
-                document.getElementById("p-content").innerHTML = marked.parse("\`\`\`Please check the URL or go back to the homepage.\`\`\`");
-                document.getElementById("p-content").style.textAlign = "center";
+                renderContent("> Please check the URL or go back to the homepage.", content);
                 document.querySelector('.p-buttons').style.display = 'none';
-                document.querySelector('.p-splash video').style.display = 'none';
+                document.querySelector('.p-media').style.display = 'none';
             }
         </script>
         <script src="js/motion.js"></script>
